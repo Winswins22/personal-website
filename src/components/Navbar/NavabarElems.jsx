@@ -3,21 +3,58 @@ import {Link} from 'react-router-dom'
 
 export const SmallText = styled.p`
   font-size: 0.8rem;
+  color: white;
 `
 
 export const NavbarBase = styled.div`
-  width: 200px;
-  height: 100%;
+  width: 150px;
   display: flex;
   background-color: #11103a;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-top: -9px;
+  margin-left: -9px;
+
+  @media screen and (max-width: 960px){
+    background-color: transparent;
+  }
+`
+
+export const NavbarText = styled.p`
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
 `
 
 export const NavbarLogo = styled(Link)`
   display: flex;
 `
 
+export const NavbarMenu = styled.div`
+  display:flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+`
+
 export const NavbarItem = styled(Link)`
   font-size: 1.5rem;
-  align-items: center;
+  text-align: center;
+  background-color: blue;
+
+  @media screen and (max-width: 960px){
+    transition: ${({showSidebar}) => (showSidebar ? "all 0.5s ease" : "none")} ;
+    transform: translate(120px, 50%);
+  }
 `
+
+export const BuildNavbarMenu = ({NavbarItems}) => {
+  return (
+    NavbarItems.map(navItem => {
+      return (
+        <NavbarItem to={navItem.linkTo}> 
+          <NavbarText>{navItem.text}</NavbarText> 
+        </NavbarItem>
+      )
+    })
+  )
+}

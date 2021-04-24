@@ -1,7 +1,7 @@
-import {FaReact} from 'react-icons/fa'
+import {FaBars} from 'react-icons/fa'
 
 export const NavbarImage = {
-  img: <FaReact></FaReact>,
+  img: <FaBars></FaBars>,
   alt: "Home Logo",
   linkTo: './',
 }

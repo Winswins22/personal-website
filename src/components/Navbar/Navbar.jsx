@@ -1,24 +1,34 @@
-import React from 'react'
-import {NavbarItem, NavbarLogo, SmallText} from "./NavabarElems"
+import React, {useState} from 'react'
+import {BuildNavbarMenu, NavbarBase, NavbarItem, NavbarLogo, NavbarMenu, NavbarText, SmallText} from "./NavabarElems"
 import {NavbarImage, NavbarItems} from "./Data"
 
-class Navbar extends React.Component {
-  render (){
-    return (
-      <>
-        <NavbarLogo to={NavbarImage.linkTo}>
-          {NavbarImage.img}
-        </NavbarLogo>
-        <SmallText> Web Developer </SmallText>
+function Navbar(){
 
-        {
-          NavbarItems.map(navItem => {
-            return (<NavbarItem to={navItem.linkTo}> {navItem.text} </NavbarItem>)
-          })
-        }
-      </>
-    )
+  const [showSidebar, updateSidebar] = useState(true)
+
+  const displaySidebar = () => {
+    updateSidebar(! showSidebar)
   }
+
+  return (
+    <NavbarBase>
+
+      <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar} showSidebar={showSidebar}>
+        {NavbarImage.img}
+        {/* <SmallText> Web Developer </SmallText>*/}
+      </NavbarLogo> 
+      
+        {
+          (showSidebar === true) ?
+            <NavbarMenu> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
+
+          : <></>
+        }
+      
+
+    </NavbarBase>
+  )
+
 }
 
 export default Navbar
