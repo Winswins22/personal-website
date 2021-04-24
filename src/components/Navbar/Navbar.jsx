@@ -21,7 +21,6 @@ function Navbar(){
         {
           (showSidebar === true) ?
             <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
-
           : 
             <></>
         }

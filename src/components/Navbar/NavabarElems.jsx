@@ -36,8 +36,9 @@ export const NavbarMenu = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 960px){
+    ${({showSidebar}) => (showSidebar ? console.log("Active") : "")}
     transition: ${({showSidebar}) => (showSidebar ? "all 0.5s ease" : "none")} ;
-    transform: ${({showSidebar}) => (showSidebar ? "translate(120px, 50%)" : "none")} ;
+    transform: ${({showSidebar}) => (showSidebar ? "translate(120px, 120px)" : "none")} ;
   }
 `
 
