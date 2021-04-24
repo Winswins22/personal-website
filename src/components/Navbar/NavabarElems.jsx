@@ -6,20 +6,16 @@ export const SmallText = styled.p`
   color: white;
 `
 
-export const NavbarBase = styled.div`
+export const NavbarBase = styled.nav`
   width: 150px;
   display: flex;
   background-color: #11103a;
   flex-direction: column;
   margin-top: -9px;
   margin-left: -9px;
-
-  @media screen and (max-width: 960px){
-    background-color: transparent;
-  }
 `
 
-export const NavbarText = styled.p`
+export const NavbarText = styled(Link)`
   font-size: 0.8rem;
   color: white;
   text-decoration: none;
@@ -43,14 +39,19 @@ export const NavbarLogo = styled(Link)`
 // `
 
 export const NavbarMenu = styled.ul`
+  padding-left:0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
   list-style: none;
   text-align: center;
+  
+  width: 150px;
+  height: 100vh;
 
   @media screen and (max-width: 960px) {
     display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -61,10 +62,8 @@ export const NavbarMenu = styled.ul`
   }
 `
 
-
-export const NavbarItem = styled(Link)`
+export const NavbarItem = styled.li`
   font-size: 1.5rem;
-  text-align: center;
   background-color: blue;
 `
 
@@ -72,8 +71,8 @@ export const BuildNavbarMenu = ({NavbarItems}) => {
   return (
     NavbarItems.map(navItem => {
       return (
-        <NavbarItem to={navItem.linkTo}> 
-          <NavbarText>{navItem.text}</NavbarText> 
+        <NavbarItem> 
+          <NavbarText to={navItem.linkTo}>{navItem.text}</NavbarText> 
         </NavbarItem>
       )
     })

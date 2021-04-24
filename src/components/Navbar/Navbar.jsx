@@ -13,7 +13,7 @@ function Navbar(){
   return (
     <NavbarBase>
 
-      <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar}>
+      <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar} showSidebar={showSidebar}>
         {NavbarImage.img}
         {/* <SmallText> Web Developer </SmallText>*/}
       </NavbarLogo> 

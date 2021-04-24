@@ -2,9 +2,9 @@ import React from 'react'
 
 function AboutPage(){
   return(
-    <hi>
+    <h1>
       AboutPage
-    </hi>
+    </h1>
   )
 }
 
