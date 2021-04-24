@@ -18,12 +18,14 @@ function Navbar(){
         {/* <SmallText> Web Developer </SmallText>*/}
       </NavbarLogo> 
       
-        {
+      <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
+
+        {/*
           (showSidebar === true) ?
             <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
           : 
             <></>
-        }
+        */}
       
 
     </NavbarBase>

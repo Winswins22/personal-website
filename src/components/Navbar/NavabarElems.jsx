@@ -29,18 +29,38 @@ export const NavbarLogo = styled(Link)`
   display: flex;
 `
 
-export const NavbarMenu = styled.div`
-  display:flex;
-  height: 100vh;
-  justify-content: center;
-  flex-direction: column;
+// export const NavbarMenu = styled.div`
+//   display:flex;
+//   height: 100vh;
+//   justify-content: center;
+//   flex-direction: column;
 
-  @media screen and (max-width: 960px){
-    ${({showSidebar}) => (showSidebar ? console.log("Active") : "")}
-    transition: ${({showSidebar}) => (showSidebar ? "all 0.5s ease" : "none")} ;
-    transform: ${({showSidebar}) => (showSidebar ? "translate(120px, 120px)" : "none")} ;
+//   @media screen and (max-width: 960px){
+//     ${({showSidebar}) => (showSidebar ? console.log("Active") : "")}
+//     transition: all 0.5s ease;
+//     transform: ${({showSidebar}) => (showSidebar ? "translate(120px, 120px)" : "translate(-120px, -120px)")} ;
+//   }
+// `
+
+export const NavbarMenu = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: ${({showSidebar}) => (showSidebar ? 0 : '-100%')}; //slides the mobile nav bar over when icon is clicked
+    opacity: 1;
+    transition: all 0.5s ease;
   }
 `
+
 
 export const NavbarItem = styled(Link)`
   font-size: 1.5rem;
