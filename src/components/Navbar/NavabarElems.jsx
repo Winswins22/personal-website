@@ -34,17 +34,17 @@ export const NavbarMenu = styled.div`
   height: 100vh;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 960px){
+    transition: ${({showSidebar}) => (showSidebar ? "all 0.5s ease" : "none")} ;
+    transform: ${({showSidebar}) => (showSidebar ? "translate(120px, 50%)" : "none")} ;
+  }
 `
 
 export const NavbarItem = styled(Link)`
   font-size: 1.5rem;
   text-align: center;
   background-color: blue;
-
-  @media screen and (max-width: 960px){
-    transition: ${({showSidebar}) => (showSidebar ? "all 0.5s ease" : "none")} ;
-    transform: translate(120px, 50%);
-  }
 `
 
 export const BuildNavbarMenu = ({NavbarItems}) => {

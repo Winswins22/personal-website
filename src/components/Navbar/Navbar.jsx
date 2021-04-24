@@ -4,7 +4,7 @@ import {NavbarImage, NavbarItems} from "./Data"
 
 function Navbar(){
 
-  const [showSidebar, updateSidebar] = useState(true)
+  const [showSidebar, updateSidebar] = useState(false)
 
   const displaySidebar = () => {
     updateSidebar(! showSidebar)
@@ -13,16 +13,17 @@ function Navbar(){
   return (
     <NavbarBase>
 
-      <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar} showSidebar={showSidebar}>
+      <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar}>
         {NavbarImage.img}
         {/* <SmallText> Web Developer </SmallText>*/}
       </NavbarLogo> 
       
         {
           (showSidebar === true) ?
-            <NavbarMenu> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
+            <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
 
-          : <></>
+          : 
+            <></>
         }
       
 
