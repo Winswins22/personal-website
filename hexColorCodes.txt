@@ -1,1 +1,3 @@
-bgColor: #11103a
+bgColor (black): #11103a
+green: #2ec02e
+red: #d12a2a

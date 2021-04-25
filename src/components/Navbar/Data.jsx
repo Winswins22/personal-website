@@ -1,8 +1,9 @@
-import {FaBars} from 'react-icons/fa'
+import {FaBars, FaTimes} from 'react-icons/fa'
 import Logo from '../../images/logo.png'
 
 export const TripleBarImage = {
-  img: <FaBars></FaBars>,
+  openImg: <FaBars size={100}></FaBars>,
+  closeImg: <FaTimes size={100}></FaTimes>,
   alt: "Triple Bars Navbar Toggle",
 }
 

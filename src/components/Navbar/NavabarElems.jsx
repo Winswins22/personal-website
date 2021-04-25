@@ -100,12 +100,12 @@ export const NavbarItem = styled.li`
   font-size: 1.5rem;
 `
 
-export const BuildNavbarMenu = ({NavbarItems}) => {
+export const BuildNavbarMenu = ({NavbarItems, displaySidebar}) => {
   return (
     NavbarItems.map(navItem => {
       return (
         <NavbarItem> 
-          <NavbarText to={navItem.linkTo}>{navItem.text}</NavbarText> 
+          <NavbarText to={navItem.linkTo} onClick={displaySidebar}>{navItem.text}</NavbarText> 
         </NavbarItem>
       )
     })

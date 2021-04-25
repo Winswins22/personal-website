@@ -15,17 +15,20 @@ function Navbar(){
       
       <NavbarContainer>
         <TripleLineLogo onClick={displaySidebar} showSidebar={showSidebar}>
-          {TripleBarImage.img}
+          {showSidebar ? TripleBarImage.closeImg : TripleBarImage.openImg}
         </TripleLineLogo> 
-
-        <NavbarLogo to={NavbarImage.linkTo}>
+        
+        <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar}>
           <img src={NavbarImage.img} alt={NavbarImage.alt}></img>
         </NavbarLogo>
         
         <NavbarText style={{textAlign:"center", fontSize:"2rem", paddingBottom:"10px"}}> Winston </NavbarText>
         <NavbarText style={{textAlign:"center", fontSize:"1rem"}}> Web Developer </NavbarText>
         
-        <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
+        <NavbarMenu showSidebar={showSidebar}> 
+          <BuildNavbarMenu displaySidebar={displaySidebar} NavbarItems={NavbarItems}></BuildNavbarMenu> 
+        </NavbarMenu>
+
       </NavbarContainer>
 
     </NavbarBase>
