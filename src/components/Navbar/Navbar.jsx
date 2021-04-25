@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import {BuildNavbarMenu, NavbarBase, NavbarItem, NavbarLogo, NavbarMenu, NavbarText, SmallText, NavbarContainer} from "./NavabarElems"
-import {NavbarImage, NavbarItems} from "./Data"
+import {BuildNavbarMenu, NavbarBase, NavbarLogo, TripleLineLogo, NavbarMenu, NavbarText, NavbarContainer} from "./NavabarElems"
+import {NavbarImage, TripleBarImage, NavbarItems} from "./Data"
 
 function Navbar(){
 
@@ -14,10 +14,16 @@ function Navbar(){
     <NavbarBase showSidebar={showSidebar}>
       
       <NavbarContainer>
-        <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar} showSidebar={showSidebar}>
-          {NavbarImage.img}
-          {/* <SmallText> Web Developer </SmallText>*/}
-        </NavbarLogo> 
+        <TripleLineLogo onClick={displaySidebar} showSidebar={showSidebar}>
+          {TripleBarImage.img}
+        </TripleLineLogo> 
+
+        <NavbarLogo to={NavbarImage.linkTo}>
+          <img src={NavbarImage.img} alt={NavbarImage.alt}></img>
+        </NavbarLogo>
+        
+        <NavbarText style={{textAlign:"center", fontSize:"2rem", paddingBottom:"10px"}}> Winston </NavbarText>
+        <NavbarText style={{textAlign:"center", fontSize:"1rem"}}> Web Developer </NavbarText>
         
         <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
       </NavbarContainer>

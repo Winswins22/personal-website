@@ -1,7 +1,13 @@
 import {FaBars} from 'react-icons/fa'
+import Logo from '../../images/logo.png'
+
+export const TripleBarImage = {
+  img: <FaBars></FaBars>,
+  alt: "Triple Bars Navbar Toggle",
+}
 
 export const NavbarImage = {
-  img: <FaBars></FaBars>,
+  img: Logo,
   alt: "Home Logo",
   linkTo: './',
 }

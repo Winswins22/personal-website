@@ -6,6 +6,16 @@ export const SmallText = styled.p`
   color: white;
 `
 
+export const FixedNavbarText = styled.p`
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+`
+
 export const NavbarBase = styled.div`
   background-color: #11103a;
 
@@ -14,11 +24,7 @@ export const NavbarBase = styled.div`
   left: 0px;
 
   @media screen and (max-width: 960px) {
-    background-color: red;
     width: 100%;
-  }
-
-  @media screen and (max-width: 960px) {
     left: ${({showSidebar}) => (showSidebar ? 0 : '-100%')}; //slides the mobile nav bar over when icon is clicked
     transition: all 0.5s ease;
   }
@@ -28,8 +34,10 @@ export const NavbarContainer = styled.div`
   width: 150px;
   display: flex;
   flex-direction: column;
-  margin-top: -9px;
-  margin-left: -9px;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 export const NavbarText = styled(Link)`
@@ -39,6 +47,13 @@ export const NavbarText = styled(Link)`
 `
 
 export const NavbarLogo = styled(Link)`
+  @media screen and (max-width: 960px){
+    margin-left: calc(50vw - 75px); // 75px - half the size of the logo
+    margin-right: calc(50vw - 75px); 
+  }
+`
+
+export const TripleLineLogo = styled(Link)`
   position: fixed;
   top: 0px;
   left: 0px;
@@ -77,13 +92,12 @@ export const NavbarMenu = styled.ul`
   height: 100vh;
 
   @media screen and (max-width: 960px) {
-    width: 100vw;
+    width: 100%;
   }
 `
 
 export const NavbarItem = styled.li`
   font-size: 1.5rem;
-  background-color: blue;
 `
 
 export const BuildNavbarMenu = ({NavbarItems}) => {
