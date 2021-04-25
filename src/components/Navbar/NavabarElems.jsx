@@ -6,10 +6,24 @@ export const SmallText = styled.p`
   color: white;
 `
 
-export const NavbarBase = styled.nav`
+export const NavbarBase = styled.div`
+  background-color: #11103a;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  opacity: 0.5;
+
+  @media screen and (max-width: 960px) {
+    background-color: red;
+    width: 100%
+  }
+`
+
+export const NavbarContainer = styled.div`
   width: 150px;
   display: flex;
-  background-color: #11103a;
   flex-direction: column;
   margin-top: -9px;
   margin-left: -9px;
@@ -22,7 +36,16 @@ export const NavbarText = styled(Link)`
 `
 
 export const NavbarLogo = styled(Link)`
-  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  display: none;
+
+  @media screen and (max-width: 960px){
+    display: fixed;
+  }
+
 `
 
 // export const NavbarMenu = styled.div`
@@ -49,6 +72,8 @@ export const NavbarMenu = styled.ul`
   
   width: 150px;
   height: 100vh;
+
+  
 
   @media screen and (max-width: 960px) {
     display: flex;

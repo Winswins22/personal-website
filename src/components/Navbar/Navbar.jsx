@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {BuildNavbarMenu, NavbarBase, NavbarItem, NavbarLogo, NavbarMenu, NavbarText, SmallText} from "./NavabarElems"
+import {BuildNavbarMenu, NavbarBase, NavbarItem, NavbarLogo, NavbarMenu, NavbarText, SmallText, NavbarContainer} from "./NavabarElems"
 import {NavbarImage, NavbarItems} from "./Data"
 
 function Navbar(){
@@ -11,22 +11,16 @@ function Navbar(){
   }
 
   return (
-    <NavbarBase>
-
-      <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar} showSidebar={showSidebar}>
-        {NavbarImage.img}
-        {/* <SmallText> Web Developer </SmallText>*/}
-      </NavbarLogo> 
+    <NavbarBase showSidebar={showSidebar}>
       
-      <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
-
-        {/*
-          (showSidebar === true) ?
-            <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
-          : 
-            <></>
-        */}
-      
+      <NavbarContainer>
+        <NavbarLogo to={NavbarImage.linkTo} onClick={displaySidebar} showSidebar={showSidebar}>
+          {NavbarImage.img}
+          {/* <SmallText> Web Developer </SmallText>*/}
+        </NavbarLogo> 
+        
+        <NavbarMenu showSidebar={showSidebar}> <BuildNavbarMenu NavbarItems={NavbarItems}></BuildNavbarMenu> </NavbarMenu>
+      </NavbarContainer>
 
     </NavbarBase>
   )
