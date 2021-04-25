@@ -13,11 +13,14 @@ export const NavbarBase = styled.div`
   top: 0px;
   left: 0px;
 
-  opacity: 0.5;
-
   @media screen and (max-width: 960px) {
     background-color: red;
-    width: 100%
+    width: 100%;
+  }
+
+  @media screen and (max-width: 960px) {
+    left: ${({showSidebar}) => (showSidebar ? 0 : '-100%')}; //slides the mobile nav bar over when icon is clicked
+    transition: all 0.5s ease;
   }
 `
 
@@ -73,17 +76,8 @@ export const NavbarMenu = styled.ul`
   width: 150px;
   height: 100vh;
 
-  
-
   @media screen and (max-width: 960px) {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 80px;
-    left: ${({showSidebar}) => (showSidebar ? 0 : '-100%')}; //slides the mobile nav bar over when icon is clicked
-    opacity: 1;
-    transition: all 0.5s ease;
+    width: 100vw;
   }
 `
 
