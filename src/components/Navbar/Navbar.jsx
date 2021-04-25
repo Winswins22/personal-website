@@ -24,7 +24,7 @@ function Navbar(){
         
         <NavbarText style={{textAlign:"center", fontSize:"2rem", paddingBottom:"10px"}}> Winston </NavbarText>
         <NavbarText style={{textAlign:"center", fontSize:"1rem"}}> Web Developer </NavbarText>
-        
+
         <NavbarMenu showSidebar={showSidebar}> 
           <BuildNavbarMenu displaySidebar={displaySidebar} NavbarItems={NavbarItems}></BuildNavbarMenu> 
         </NavbarMenu>

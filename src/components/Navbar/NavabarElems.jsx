@@ -6,15 +6,7 @@ export const SmallText = styled.p`
   color: white;
 `
 
-export const FixedNavbarText = styled.p`
-  font-size: 0.8rem;
-  color: white;
-  text-decoration: none;
 
-  position: fixed;
-  left: 0;
-  top: 0;
-`
 
 export const NavbarBase = styled.div`
   background-color: #11103a;
@@ -44,6 +36,8 @@ export const NavbarText = styled(Link)`
   font-size: 0.8rem;
   color: white;
   text-decoration: none;
+
+  font-size: 1.5rem;
 `
 
 export const NavbarLogo = styled(Link)`
@@ -97,7 +91,10 @@ export const NavbarMenu = styled.ul`
 `
 
 export const NavbarItem = styled.li`
-  font-size: 1.5rem;
+  margin: 5px;
+
+  border-top: 5px solid #1c1b5e;
+  border-bottom: 5px solid #1c1b5e;
 `
 
 export const BuildNavbarMenu = ({NavbarItems, displaySidebar}) => {
