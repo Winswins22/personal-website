@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Img = styled.img`
-  max-height: 350px;
-  max-width: 100%;
+  max-height: 100%;
+  max-width: 350px;
 
   alt: ${props => props.alt};
 
@@ -33,15 +33,25 @@ export const ItemWrapper = styled.div`
 export const InfoSectionWrapper = styled.div`
   display: flex;
 
+  @media screen and (min-width: 960px){
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
   @media screen and (max-width: 960px){
     flex-direction: column;
+    margin-bottom: auto;
   }
 `
 
 export const HeadingText = styled.p`
   margin: auto;
+  margin-left: 0px;
 
   color: white;
+  text-align: left;
   font-size: 10rem;
 
   @media screen and (max-width: 960px){
