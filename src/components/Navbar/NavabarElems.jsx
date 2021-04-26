@@ -9,7 +9,7 @@ export const SmallText = styled.p`
 
 
 export const NavbarBase = styled.div`
-  background-color: #11103a;
+  background-color: #0b0a21;
 
   position: fixed;
   top: 0px;
@@ -33,11 +33,19 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavbarText = styled(Link)`
-  font-size: 0.8rem;
   color: white;
   text-decoration: none;
-
   font-size: 1.5rem;
+
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left: 5px solid #1c1b5e;
+  border-right: 5px solid #1c1b5e;
+
+  @media screen and (max-with:960px){
+    padding-left: 5px;
+    padding-right: 25px;
+  }
 `
 
 export const NavbarLogo = styled(Link)`
@@ -50,7 +58,7 @@ export const NavbarLogo = styled(Link)`
 export const TripleLineLogo = styled(Link)`
   position: fixed;
   top: 0px;
-  left: 0px;
+  right: 0px;
 
   display: none;
 

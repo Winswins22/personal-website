@@ -1,10 +1,11 @@
 import React from 'react'
+import PageWrapper from '../../components/PageWrapper/PageWrapper'
 
 function ContactPage(){
   return(
-    <h1>
-      ContactPage
-    </h1>
+    <PageWrapper>
+      Contact
+    </PageWrapper>
   )
 }
 

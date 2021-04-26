@@ -1,10 +1,11 @@
 import React from 'react'
+import PageWrapper from '../../components/PageWrapper/PageWrapper'
 
 function SkillsPage(){
   return(
-    <h1>
-      SkillsPage
-    </h1>
+    <PageWrapper>
+      Skills
+    </PageWrapper>
   )
 }
 

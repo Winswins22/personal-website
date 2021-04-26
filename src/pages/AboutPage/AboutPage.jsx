@@ -1,10 +1,11 @@
 import React from 'react'
+import PageWrapper from '../../components/PageWrapper/PageWrapper'
 
 function AboutPage(){
   return(
-    <h1>
-      AboutPage
-    </h1>
+    <PageWrapper>
+      About
+    </PageWrapper>
   )
 }
 
