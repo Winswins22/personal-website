@@ -23,7 +23,7 @@ export const NavbarItems = [
     linkTo: './skills',
   },
   {
-    text: "Contact Me",
+    text: "Contact",
     linkTo: './contact',
   }
 ]
