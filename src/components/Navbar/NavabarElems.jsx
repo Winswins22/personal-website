@@ -32,20 +32,22 @@ export const NavbarContainer = styled.div`
   }
 `
 
-export const NavbarText = styled(Link)`
+export const NavbarText = styled.p`
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
 
-  padding-left: 5px;
-  padding-right: 5px;
+  /* padding-left: 5px;
+  padding-right: 5px; */
   border-left: 5px solid #1c1b5e;
   border-right: 5px solid #1c1b5e;
 
-  @media screen and (max-with:960px){
+  /* @media screen and (max-width:960px){
     padding-left: 5px;
     padding-right: 25px;
-  }
+  } */
 `
 
 export const NavbarLogo = styled(Link)`
@@ -82,7 +84,7 @@ export const TripleLineLogo = styled(Link)`
 // `
 
 export const NavbarMenu = styled.ul`
-  padding-left:0;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
 
@@ -98,8 +100,10 @@ export const NavbarMenu = styled.ul`
   }
 `
 
-export const NavbarItem = styled.li`
-  margin: 5px;
+export const NavbarItem = styled(Link)`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
 
   border-top: 5px solid #1c1b5e;
   border-bottom: 5px solid #1c1b5e;
@@ -109,8 +113,8 @@ export const BuildNavbarMenu = ({NavbarItems, displaySidebar}) => {
   return (
     NavbarItems.map(navItem => {
       return (
-        <NavbarItem> 
-          <NavbarText to={navItem.linkTo} onClick={displaySidebar}>{navItem.text}</NavbarText> 
+        <NavbarItem to={navItem.linkTo}> 
+          <NavbarText onClick={displaySidebar}>{navItem.text}</NavbarText> 
         </NavbarItem>
       )
     })

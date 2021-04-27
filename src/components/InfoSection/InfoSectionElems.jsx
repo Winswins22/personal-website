@@ -42,7 +42,7 @@ export const InfoSectionWrapper = styled.div`
 
   @media screen and (max-width: 960px){
     flex-direction: column;
-    margin-bottom: auto;
+    margin-bottom: 50px;
   }
 `
 
