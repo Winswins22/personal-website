@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,KACE,WAAY,CACZ,YACF,CAEA,KACE,iBAAkB,CAClB,wBACF","file":"main.6a674cf6.chunk.css","sourcesContent":[".App {\n  width: 100vw;\n  height: 100vh;\n}\n\nbody {\n  overflow-x: hidden; /* Hide horizontal scrollbar */\n  background-color: #202033;\n}\n"]}
