@@ -91,7 +91,7 @@ export const NavbarMenu = styled.ul`
   text-align: center;
   
   width: 150px;
-  height: 100vh;
+  height: calc(100vh - 150px); // 150px-height of logo
 
   @media screen and (max-width: 960px) {
     width: 100%;
