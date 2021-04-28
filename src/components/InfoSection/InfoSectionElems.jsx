@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Img = styled.img`
-  max-height: 100%;
-  max-width: 350px;
+  //max-height: 100%;
+  max-width: 40vw;
 
   alt: ${props => props.alt};
 
