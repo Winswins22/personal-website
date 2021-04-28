@@ -10,7 +10,7 @@ export const TripleBarImage = {
 export const NavbarImage = {
   img: Logo,
   alt: "Home Logo",
-  linkTo: './',
+  linkTo: '/personal-website',
 }
 
 export const NavbarItems = [
