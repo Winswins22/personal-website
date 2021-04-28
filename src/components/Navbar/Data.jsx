@@ -16,14 +16,18 @@ export const NavbarImage = {
 export const NavbarItems = [
   {
     text: "About",
-    linkTo: './about',
+    linkTo: '/about',
   },
   {
     text: "Skills",
-    linkTo: './skills',
+    linkTo: '/skills',
   },
   {
     text: "Contact",
-    linkTo: './contact',
+    linkTo: '/contact',
+  },
+  {
+    text: "Loader",
+    linkTo: '/loader',
   }
 ]
