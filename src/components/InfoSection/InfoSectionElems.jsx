@@ -32,6 +32,9 @@ export const ItemWrapper = styled.div`
 // horizontal flexbox, unless mobile, then vertical
 export const InfoSectionWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
+
+  z-index: 10;
 
   @media screen and (min-width: 960px){
     margin-top: 50px;

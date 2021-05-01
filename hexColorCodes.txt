@@ -1,4 +1,5 @@
 navbar color (black): #0b0a21
+loading screen color: #181826
 mid-dark black (bgColor): #202033
 lighter black: #1c1b5e
 

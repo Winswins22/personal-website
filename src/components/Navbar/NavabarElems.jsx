@@ -11,6 +11,8 @@ export const SmallText = styled.p`
 export const NavbarBase = styled.div`
   background-color: #0b0a21;
 
+  z-index: 90;
+  
   position: fixed;
   top: 0px;
   left: 0px;

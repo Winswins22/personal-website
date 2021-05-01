@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-const PageWrapper = styled.div`
+export const PageWrapper = styled.div`
+  position: fixed;
+  top: 0;
+
   margin-left: 150px;
 
   @media screen and (max-width: 960px){
@@ -9,4 +12,10 @@ const PageWrapper = styled.div`
   }
 `
 
-export default PageWrapper
+export const DesktopOnlyPageWrapper = styled.div`
+
+  @media screen and (min-width: 960px){
+    margin-left: 150px;
+  }
+
+`

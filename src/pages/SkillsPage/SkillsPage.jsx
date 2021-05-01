@@ -1,5 +1,5 @@
 import React from 'react'
-import PageWrapper from '../../components/PageWrapper/PageWrapper'
+import {PageWrapper} from '../../components/PageWrapper/PageWrapper'
 
 function SkillsPage(){
   return(
