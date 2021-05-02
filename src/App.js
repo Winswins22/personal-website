@@ -12,6 +12,9 @@ import ContactPage from './pages/ContactPage/ContactPage'
 import Loader from './components/Loader/Loader'
 
 function App() {
+
+  console.log("Debug: v0.0.01")
+
   return (
     <>
       <Router>
