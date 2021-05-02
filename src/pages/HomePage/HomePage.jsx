@@ -5,16 +5,18 @@ import Loader from '../../components/Loader/Loader'
 
 import {sectionData} from './Data'
 
-function HomePage(){
-  const [timesLoaded, setLoading] = useState(0);
+// initialLoading:
+// Set to '1' to skip loader animation.
+function HomePage(initialLoading = 0){
+  const [timesLoaded, setLoading] = useState(initialLoading);
 
   useEffect(() => {
     setTimeout(() => {
       if (timesLoaded !== 1){
         setLoading(1);
-        console.log("Set 'timesLoaded' to 1!", timesLoaded)
+        //console.log("Set 'timesLoaded' to 1!", timesLoaded)
       }
-    }, 2100)
+    }, 2150)
   })
 
   return(
