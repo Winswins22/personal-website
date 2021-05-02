@@ -1,4 +1,4 @@
-// Loader: 
+// Loader (mode: "standard"): 
 //  This animation takes 1.7s before loader starts to leave the screen, 
 //  and finishes its animation at 2.2s.
 //  Making pages load after ~2.1s-2.3s should look ok.
@@ -15,10 +15,12 @@ import {
   Text,
 } from './LoaderElems'
 
+import {timings} from './LoaderTimings'
+
 import Logo from '../../images/logo.png'
 import {DesktopOnlyPageWrapper} from '../PageWrapper/PageWrapper'
 
-const Loader = () => {
+const Loader = ({mode="standard"}) => {
 
   const [loading, changeLoad] = useState(true)
 
@@ -27,21 +29,21 @@ const Loader = () => {
     from: {x: "-100vw"},
     enter: {x: "0vw"},
     leave: {x: "100vw"},
-    config: { duration: 500, friction: 5 }
+    config: { duration: timings[mode]["transition"], friction: 5 }
   })
 
   const barAnimation = useSpring({
     to: { width: "100%" },
     from: { width: "0%" },
-    config: { duration: 1000 },
-    delay: 600, // 500 (base) for transition.config.duration, +150ms so animation looks more clean
+    config: { duration: timings[mode]["bar-fill-time"] },
+    delay: timings[mode]["transition"] + timings[mode]["clean-animation-timing"], 
   })
 
   // After 1.7s (transition.config.duration * 2 + barAnimation.delay + 100ms), show page
   useEffect(() => {
     setTimeout(() => {
       changeLoad(false)
-    }, 1700)
+    }, timings[mode]["finish-bar-load-time"] - timings[mode]["transition"])
   })
 
   return (
