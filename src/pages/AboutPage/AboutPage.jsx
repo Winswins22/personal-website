@@ -5,7 +5,7 @@ import Loader from '../../components/Loader/Loader'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
-function AboutPage(initialLoading = 0){
+function AboutPage({initialLoading = 0}){
   const [timesLoaded, setLoading] = useState(initialLoading);
 
   useEffect(() => {
