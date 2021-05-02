@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const PageWrapper = styled.div`
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
 
   margin-left: 150px;
 
