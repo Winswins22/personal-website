@@ -3,8 +3,6 @@ import {PageWrapper} from '../../components/PageWrapper/PageWrapper'
 import InfoSection from '../../components/InfoSection/InfoSection'
 import Loader from '../../components/Loader/Loader'
 
-import {sectionData} from './Data'
-
 // initialLoading:
 // Set to '1' to skip loader animation.
 function HomePage({initialLoading = 0}){
@@ -25,12 +23,7 @@ function HomePage({initialLoading = 0}){
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            {
-              sectionData.map(oneSection => {
-                console.log("Rendering!")
-                return(<InfoSection {...oneSection}></InfoSection>);
-              })
-            }
+            {/* Page code here */}
           </PageWrapper>
 
         :

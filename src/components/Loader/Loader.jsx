@@ -1,5 +1,10 @@
+// Loader: 
+//  This animation takes 1.7s before loader starts to leave the screen, 
+//  and finishes its animation at 2.2s.
+//  Making pages load after ~2.1s-2.3s should look ok.
+
 import React, {useState, useEffect} from 'react'
-import {useTransition, animated} from 'react-spring'
+import {useTransition, animated, useSpring} from 'react-spring'
 
 import {
   ProgressBarBase,
@@ -13,7 +18,7 @@ import {
 import Logo from '../../images/logo.png'
 import {DesktopOnlyPageWrapper} from '../PageWrapper/PageWrapper'
 
-const TheLoader = ({progress}) => {
+const Loader = () => {
 
   const [loading, changeLoad] = useState(true)
 
@@ -25,24 +30,19 @@ const TheLoader = ({progress}) => {
     config: { duration: 500, friction: 5 }
   })
 
-  // After 1.65s (loading time), show page
+  const barAnimation = useSpring({
+    to: { width: "100%" },
+    from: { width: "0%" },
+    config: { duration: 1000 },
+    delay: 600, // 500 (base) for transition.config.duration, +150ms so animation looks more clean
+  })
+
+  // After 1.7s (transition.config.duration * 2 + barAnimation.delay + 100ms), show page
   useEffect(() => {
     setTimeout(() => {
       changeLoad(false)
-    }, 1650)
+    }, 1700)
   })
-
-  // const beforeLoad = useSpring({
-  //   to: { marginLeft: "0vw" },
-  //   from: { marginLeft: "-100vw" },
-  //   config: { delay: 1000, duration: 1000 }
-  // })
-
-  // const afterLoad = useSpring({
-  //   to: { marginLeft: "100vw" },
-  //   from: { marginLeft: "0vw" },
-  //   config: { delay: 1000, duration: 1000 }
-  // })
 
   return (
 
@@ -64,7 +64,7 @@ const TheLoader = ({progress}) => {
                   </CenteringDiv>
 
                   <ProgressBarBase>
-                    <ProgressBar barProgress={progress}></ProgressBar>
+                    <ProgressBar style={barAnimation}></ProgressBar>
                   </ProgressBarBase>
                 </CenteringDiv>
                 
@@ -79,73 +79,45 @@ const TheLoader = ({progress}) => {
 
     </>
 
-    
-
-    // <animated.div style={doneLoading ? afterLoad : beforeLoad}>  
-
-    //   <PageWrapper>
-    //     <LoadingScreenBase>
-    //       <CenteringDiv>
-    //         <ProgressBarBase>
-    //           <ProgressBar barProgress={progress}></ProgressBar>
-    //         </ProgressBarBase>
-    //       </CenteringDiv>
-    //     </LoadingScreenBase>
-    //   </PageWrapper>
-
-    // </animated.div>
-
   )
 
 }
 
-// Loader class to wrap around TheLoader to avoid violating Rules of Hooks
-class Loader extends React.Component {
+// // Loader class to wrap around TheLoader to avoid violating Rules of Hooks
+// class Loader extends React.Component {
 
-  constructor(props){
-    super(props)
+//   render() {
+//       return(
+//         <>
+//           <TheLoader></TheLoader>
+//         </>
+//       )
+//   }
 
-    this.state={
-      loading: false,
-      progress: 0,
-      timer: null,
-      delay: true, 
-      isLoading: true,
-    }
-  }
+//   // componentDidMount (){
 
-  render() {
-      return(
-        <>
-          <TheLoader progress={this.state.progress}></TheLoader>
-        </>
-      )
-  }
+//   //   this.timer = setInterval(() => {
+//   //     // Loading screen is arriving from left side
+//   //     if (this.state.delay){
+//   //       setTimeout(() => {
+//   //         this.setState({
+//   //           delay: false
+//   //         })
+//   //       }, 550)
+//   //     }
+//   //     // Loading screen is loading (bar is filling)
+//   //     else if (this.state.progress !== 50){
+//   //       // this.setState({
+//   //       //   progress: Math.min(50, this.state.progress + 1) // 50: prevent bar from going over the width
+//   //       // })
+//   //     }
+//   //   }, 10)
+//   // }
 
-  componentDidMount (){
+//   // componentWillUnmount (){
+//   //   clearInterval(this.timer)
+//   // }
 
-    this.timer = setInterval(() => {
-      // Loading screen is arriving from left side
-      if (this.state.delay){
-        setTimeout(() => {
-          this.setState({
-            delay: false
-          })
-        }, 550)
-      }
-      // Loading screen is loading (bar is filling)
-      else if (this.state.progress !== 50){
-        this.setState({
-          progress: Math.min(50, this.state.progress + 1) // 50: prevent bar from going over the width
-        })
-      }
-    }, 10)
-  }
-
-  componentWillUnmount (){
-    clearInterval(this.timer)
-  }
-
-}
+// }
 
 export default Loader

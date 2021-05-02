@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {animated} from 'react-spring'
 
 export const CenteringDiv = styled.div`
   display:flex;
@@ -16,10 +17,10 @@ export const ProgressBarBase = styled.div`
 `
 
 // the green progress bar. Moves according to a variable
-export const ProgressBar = styled.div`
+export const ProgressBar = styled(animated.div)`
   background-color: #2ec02e;
   border-radius: 1.5em;
-  width: ${({barProgress}) => ((barProgress !== 0) ? barProgress : 0)}vw;
+  //width: ${({barProgress}) => ((barProgress !== 0) ? barProgress : 0)}vw;
   height: 1em;
 `
 
