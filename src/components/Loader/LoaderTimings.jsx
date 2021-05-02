@@ -5,10 +5,10 @@
 // }
 export const timings = {
   "standard":{
-    "transition": 500,
+    "transition": 450,
     "clean-animation-timing": 100,
-    "bar-fill-time": 1000,
-    "finish-bar-load-time": 500 * 2 + 100 * 2 + 1000, // aka "transition" * 2 + "clean-animation-timing" * 2 + "bar-fill-time"
+    "bar-fill-time": 550,
+    "finish-bar-load-time": 450 * 2 + 100 * 2 + 550, // aka "transition" * 2 + "clean-animation-timing" * 2 + "bar-fill-time"
   },
   "fast":{
     "transition": 350,
