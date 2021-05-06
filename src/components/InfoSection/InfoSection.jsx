@@ -45,7 +45,7 @@ const InfoSection = ({title="", description="", img=Placeholder, alt="Placeholde
 
         <HorizontalSpacing></HorizontalSpacing>
         
-        <ItemWrapper style={{justifyContent:"flex-end"}} data-aos='fade-left'>
+        <ItemWrapper style={{justifyContent:"center"}} data-aos='fade-left'>
           {
             (img !== "") ? 
               <Img alt={alt} src={img}></Img>
