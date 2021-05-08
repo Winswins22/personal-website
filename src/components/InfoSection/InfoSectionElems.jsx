@@ -1,13 +1,58 @@
 import styled from 'styled-components'
 
+export const LeftSection = styled.div`
+  width: 70vw;
+
+  @media screen and (max-width: 960px){
+    width: 100vw;
+  }
+`
+
+export const LogoAsText = styled.img`
+  width: 7.5rem;
+
+  @media screen and (max-width: 960px){
+    width: 5rem;
+  }
+`
+
 export const Img = styled.img`
   //max-height: 100%;
-  width: 40vw;
+  width: 30vw;
 
   alt: ${props => props.alt};
 
   @media screen and (max-width: 960px){
-    max-width: 100vw;
+    width: 100vw;
+  }
+`
+
+export const TitleSpacing = styled.div`
+  width: 1rem;
+`
+
+export const AnimatedTitle = styled.p`
+  color: white;
+  text-align: left;
+  font-size: 7.5rem;
+  //margin-right: 10rem;
+
+  @media screen and (max-width: 960px){
+    font-size: 5rem;
+  }
+
+  transition: color 10s ease-in-out;
+
+  :hover{
+    color: #2ec02e;
+  }
+`
+
+export const EmptyImg = styled.div`
+  width: 30vw;
+
+  @media screen and (max-width: 960px){
+    width: 100vw;
   }
 `
 
@@ -64,12 +109,14 @@ export const HeadingText = styled.p`
 `
 
 export const Text = styled.p`
-  margin: auto;
-
-  color: white;
+  color: ${props => props.color || "white"};
   font-size: 1.5rem;
 
   @media screen and (max-width: 960px){
     margin-bottom: 20px;
   }
+`
+
+export const NewLine = styled.div`
+  margin-bottom: 0px;
 `

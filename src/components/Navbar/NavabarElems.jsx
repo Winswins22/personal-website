@@ -52,11 +52,42 @@ export const NavbarText = styled.p`
   } */
 `
 
+export const NavbarTextButton = styled.p`
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  /* padding-left: 5px;
+  padding-right: 5px; */
+  border-left: 5px solid #1c1b5e;
+  border-right: 5px solid #1c1b5e;
+
+  /* @media screen and (max-width:960px){
+    padding-left: 5px;
+    padding-right: 25px;
+  } */
+
+  transition: all 0.2s ease-out;
+
+  :hover {
+		color: #2ec02e;
+    background-color: #181826;
+	}
+`
+
 export const NavbarLogo = styled(Link)`
   @media screen and (max-width: 960px){
     margin-left: calc(50vw - 75px); // 75px - half the size of the logo
     margin-right: calc(50vw - 75px); 
   }
+
+  transition: all 0.2s ease-out;
+
+  :hover {
+		background-color: #181826;
+	}
 `
 
 export const TripleLineLogo = styled(Link)`
@@ -116,7 +147,7 @@ export const BuildNavbarMenu = ({NavbarItems, displaySidebar}) => {
     NavbarItems.map(navItem => {
       return (
         <NavbarItem to={navItem.linkTo}> 
-          <NavbarText onClick={displaySidebar}>{navItem.text}</NavbarText> 
+          <NavbarTextButton onClick={displaySidebar}>{navItem.text}</NavbarTextButton> 
         </NavbarItem>
       )
     })

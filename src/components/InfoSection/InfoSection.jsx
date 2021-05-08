@@ -6,14 +6,19 @@ import {
   HeadingText,
   Text,
   HorizontalSpacing,
+  EmptyImg,
+  AnimatedTitle,
+  TitleSpacing,
 } from './InfoSectionElems'
 
-import Placeholder from '../../images/placeholder.png'
+// import Placeholder from '../../images/placeholder.png'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
 
-const InfoSection = ({title="", description="", img=Placeholder, alt="Placeholder alt text"}) => {
+const InfoSection = ({title="", description="", img="", alt="Placeholder alt text"}) => {
+
+  // const titleArray = title.split(/(\s+)/)
 
   //Animate on Scroll
   useEffect(() => {
@@ -26,8 +31,11 @@ const InfoSection = ({title="", description="", img=Placeholder, alt="Placeholde
 
         <ItemWrapper data-aos='fade-right'>
           {
-            (title !== "")?
-              <HeadingText> {title} </HeadingText>
+            (title !== "") ? 
+              (typeof(title) === 'string') ?
+                <AnimatedTitle> {title} </AnimatedTitle>
+              :
+                <>{title}</>
             :
               <></>
           }
@@ -50,11 +58,12 @@ const InfoSection = ({title="", description="", img=Placeholder, alt="Placeholde
             (img !== "") ? 
               <Img alt={alt} src={img}></Img>
             :
-              <></>
+              <EmptyImg></EmptyImg>
           }
         </ItemWrapper>
 
       </InfoSectionWrapper>
+
     </>
   )
 }
