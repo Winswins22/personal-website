@@ -15,7 +15,7 @@ import {
   Text
 } from '../../components/InfoSection/InfoSectionElems'
 
-import Logo from '../../images/logoBottom.png'
+import Logo from '../../images/logo.png'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
@@ -56,14 +56,14 @@ function HomePage({mode = "standard", initialLoading = 0}){
                 <AnimatedTitle data-aos="fade-down"> Hi, </AnimatedTitle>
                 
                 {/* <AnimatedTitle data-aos="fade-right" data-aos-delay="500"> I'm Winston </AnimatedTitle> */}
-                <div style={{display: "flex"}}>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
                   <AnimatedTitle data-aos="fade-right" data-aos-delay="500"> I'm </AnimatedTitle>
                   <TitleSpacing></TitleSpacing>
                   <LogoAsText data-aos="fade-right" data-aos-delay="500" src={Logo} alt={"'W' Logo"}></LogoAsText>
                   <AnimatedTitle data-aos="fade-right" data-aos-delay="500"> inston, </AnimatedTitle>
                 </div>
 
-                <div style={{display: "flex"}}>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
                   <AnimatedTitle data-aos="fade-left" data-aos-delay="1000"> web </AnimatedTitle>
                   <TitleSpacing></TitleSpacing><TitleSpacing></TitleSpacing>
                   <AnimatedTitle data-aos="fade-left" data-aos-delay="1000"> developer </AnimatedTitle>

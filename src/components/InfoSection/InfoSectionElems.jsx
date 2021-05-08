@@ -9,10 +9,10 @@ export const LeftSection = styled.div`
 `
 
 export const LogoAsText = styled.img`
-  width: 7.5rem;
+  width: 120px;
 
   @media screen and (max-width: 960px){
-    width: 5rem;
+    width: 80px;
   }
 `
 
@@ -28,7 +28,7 @@ export const Img = styled.img`
 `
 
 export const TitleSpacing = styled.div`
-  width: 1rem;
+  width: 10px;
 `
 
 export const AnimatedTitle = styled.p`
@@ -38,7 +38,7 @@ export const AnimatedTitle = styled.p`
   //margin-right: 10rem;
 
   @media screen and (max-width: 960px){
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   transition: color 10s ease-in-out;
@@ -103,7 +103,7 @@ export const HeadingText = styled.p`
   font-size: 10rem;
 
   @media screen and (max-width: 960px){
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin-bottom: 20px;
   }
 `
