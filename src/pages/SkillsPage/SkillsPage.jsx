@@ -5,6 +5,8 @@ import Loader from '../../components/Loader/Loader'
 
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
+import SkillChart from '../../components/SkillChart/SkillChart'
+
 // initialLoading:
 // Set to '1' to skip loader animation.
 
@@ -34,7 +36,7 @@ function SkillPage({mode = "standard", initialLoading = 0}){
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            Contact
+            <SkillChart skillName={"React"}></SkillChart>
           </PageWrapper>
 
         :
