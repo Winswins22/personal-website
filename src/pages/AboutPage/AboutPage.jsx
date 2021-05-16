@@ -5,6 +5,15 @@ import Loader from '../../components/Loader/Loader'
 
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
+import {
+  Grid,
+  Item1,
+  Item2,
+  ItemWrapper
+} from './test'
+
+import Grid2x2 from '../../components/Grid2x2/Grid2x2'
+
 // initialLoading:
 // Set to '1' to skip loader animation.
 
@@ -34,7 +43,16 @@ function AboutPage({mode = "standard", initialLoading = 0}){
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            Contact
+            
+              <Grid2x2>
+                {/* <ItemWrapper> */}
+                  <Item1></Item1>
+                  <Item2></Item2>
+                  <Item1></Item1>
+                  <Item2></Item2>
+                {/* </ItemWrapper> */}
+              </Grid2x2>
+            
           </PageWrapper>
 
         :

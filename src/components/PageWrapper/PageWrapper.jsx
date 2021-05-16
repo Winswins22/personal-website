@@ -8,6 +8,7 @@ export const PageWrapper = styled.div`
 
   @media screen and (max-width: 960px){
     margin-left: 5%;
+    margin-right: 5%;
     margin-top: 100px; // put content below mobile navbar icon
   }
 `

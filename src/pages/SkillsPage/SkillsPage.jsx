@@ -7,6 +7,9 @@ import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
 import SkillChart from '../../components/SkillChart/SkillChart'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css/'
+
 // initialLoading:
 // Set to '1' to skip loader animation.
 
@@ -20,6 +23,11 @@ import SkillChart from '../../components/SkillChart/SkillChart'
 function SkillPage({mode = "standard", initialLoading = 0}){
   const [timesLoaded, setLoading] = useState(initialLoading);
 
+  //Animate on Scroll
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       if (timesLoaded !== 1){
@@ -31,12 +39,31 @@ function SkillPage({mode = "standard", initialLoading = 0}){
 
   return(
     <>
-      
+
       {
         (timesLoaded === 1) ? 
           
           <PageWrapper>
+            
             <SkillChart skillName={"React"}></SkillChart>
+
+            {/* <div style={{display: "flex", height: "100vh", width: "100vw", justifyContent: "center"}}>
+
+
+
+              <div style={{display: "flex"}}>
+                <div>
+                  <SkillChart skillName={"React"}></SkillChart>
+                  <SkillChart skillName={"JavaScript"}></SkillChart>
+                </div>
+                <div>
+                  <SkillChart skillName={"CSS"}></SkillChart>
+                  <SkillChart skillName={"HTML"}></SkillChart>
+                </div>
+              </div>
+
+            </div> */}
+
           </PageWrapper>
 
         :

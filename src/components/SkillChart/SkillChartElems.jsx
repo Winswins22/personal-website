@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components'
+
 //import {animated} from 'react-spring'
 
 // Speed up (ease-in)
@@ -21,10 +22,28 @@ const FillBotDonut = keyframes`
   }
 `
 
+export const Grid = styled.div`
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+
+  border: 5px solid red; // Turn on for visibilty.
+
+  grid-template-areas: "overlap";
+`
+
+export const GridOverlapper = styled.div`
+  margin: auto;
+  grid-area: overlap;
+` 
+
 export const Text = styled.p`
-  margin-top: 10px;
+  text-align: center;
   color: ${props => props.color || "white"};
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 
   /* @media screen and (max-width: 960px){
     margin-bottom: 20px;
@@ -45,7 +64,7 @@ export const DonutBaseClass = styled.div`
   height: 20vw; 
 
   box-sizing: border-box;
-  border: 20px solid white;
+  border: 15px solid white;
   border-radius: 50%;
 
   transform: rotate(-45deg);
@@ -57,6 +76,7 @@ export const UpperDonut = styled(DonutBaseClass)`
   //transition: transform 0.5s ease-in;
 
   animation-name: ${FillTopDonut};
+  animation-delay: 0.5s;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
@@ -64,96 +84,16 @@ export const UpperDonut = styled(DonutBaseClass)`
 
 export const LowerDonut = styled(DonutBaseClass)`
   margin-top: -10vw; // get the bottom of the donut instead of the top
-  left: 30vw;
+  //left: 30vw;
   border-color: #2ec02e #2ec02e #d12a2a #d12a2a;
 
   animation-name: ${FillBotDonut};
-  animation-delay: 0.7s;
+  animation-delay: 1.2s;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 `
 
-export const Checkmark = styled.div`
-
+export const Checkmark = styled.img`
+  width: 15vw;
 `
-
-export const DonutChart = ({skillName="", useCheckmark = true}) => {
-  return (
-    <>
-      <div style={{display:"flex", width:"20vw", flexDirection:"column", alignItems:"center"}}>
-        <div>
-          <ItemClipper>
-            <UpperDonut></UpperDonut>
-          </ItemClipper>
-          <ItemClipper>
-            <LowerDonut></LowerDonut>
-          </ItemClipper>
-          {
-            useCheckmark ?
-              <Checkmark></Checkmark>
-            : 
-              <></>
-          }
-        </div>
-        {        
-          (skillName !== "")?
-            <Text> {skillName} </Text>
-          : 
-            <></>
-        }
-      </div>
-    </>
-  )
-}
-
-// const DonutFillAnimation = keyframes`
-//   to {
-
-//     background: 
-//     radial-gradient(#202033 50%,transparent 0%),
-//     conic-gradient(
-//         #2ec02e 1deg, 
-//         #d12a2a 0 360deg 
-//     )
-
-//   }
-
-//   from {
-
-//     background: 
-//     radial-gradient(#202033 50%,transparent 0%),
-//     conic-gradient(
-//         #2ec02e 359deg, 
-//         #d12a2a 0 360deg 
-//     )
-
-//   }
-
-//   /* from {
-//     width: 100px;
-//   }
-
-//   to {
-//     width: 1000px;
-//   } */
-// `
-
-// export const DonutChart = styled(animated.div)`
-//   display: block;
-//   width: 400px;
-//   height: 400px;
-//   border-radius: 50%;
-
-//   background: 
-  
-//   radial-gradient(#202033 50%,transparent 0%),
-//   conic-gradient(
-//       #2ec02e 1deg, 
-//       #d12a2a 0 360deg 
-//   )
-// `
-
-  /* animation-name: ${DonutFillAnimation};
-  animation-duration: 5s; */
-
