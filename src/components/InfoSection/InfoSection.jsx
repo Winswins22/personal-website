@@ -56,7 +56,11 @@ const InfoSection = ({title="", description="", img="", alt="Placeholder alt tex
         <ItemWrapper style={{justifyContent:"center"}} data-aos='fade-left'>
           {
             (img !== "") ? 
-              <Img alt={alt} src={img}></Img>
+              // A div, component, etc
+              (typeof(img) === 'object') ?
+                <>{img}</>
+              :
+                <Img alt={alt} src={img}></Img>
             :
               <EmptyImg></EmptyImg>
           }

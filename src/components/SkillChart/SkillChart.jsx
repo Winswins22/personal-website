@@ -30,7 +30,6 @@ const SkillChart = ({skillName = "", useCheckmark = true}) => {
   return (
     <>
       <Grid>
-        {/* <ItemWrapper> */}
           <GridOverlapper data-aos="flip-up">
             {/* <UpperDonut></UpperDonut>
             <LowerDonut></LowerDonut> */}
@@ -55,7 +54,6 @@ const SkillChart = ({skillName = "", useCheckmark = true}) => {
             : 
               <></>
           }
-        {/* </ItemWrapper> */}
       </Grid>
     </>
   )

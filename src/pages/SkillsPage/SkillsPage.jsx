@@ -6,9 +6,18 @@ import Loader from '../../components/Loader/Loader'
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
 import SkillChart from '../../components/SkillChart/SkillChart'
+import InfoSection from '../../components/InfoSection/InfoSection'
+
+import {
+  TitleSpacing, 
+  AnimatedTitle, 
+  Text
+} from '../../components/InfoSection/InfoSectionElems'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
+
+import Logo from '../../images/logo.png'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
@@ -41,27 +50,45 @@ function SkillPage({mode = "standard", initialLoading = 0}){
     <>
 
       {
+
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            
-            <SkillChart skillName={"React"}></SkillChart>
 
-            {/* <div style={{display: "flex", height: "100vh", width: "100vw", justifyContent: "center"}}>
-
-
-
-              <div style={{display: "flex"}}>
-                <div>
-                  <SkillChart skillName={"React"}></SkillChart>
-                  <SkillChart skillName={"JavaScript"}></SkillChart>
-                </div>
-                <div>
-                  <SkillChart skillName={"CSS"}></SkillChart>
-                  <SkillChart skillName={"HTML"}></SkillChart>
-                </div>
+            <InfoSection 
+              title={<>
+              <div style={{display:"flex", flexWrap:"wrap"}}>
+                <AnimatedTitle> Skills and </AnimatedTitle>
+                <AnimatedTitle> Experience </AnimatedTitle>
               </div>
+              </>} 
+              description={<> <Text data-aos="fade-left" data-aos-delay="1000" color={"grey"}> 
+                Front End Developer | React Developer 
+              </Text> </>}
 
+              img={<>
+                <div style={{display: "flex", height: "100vh"}}>
+                  <div>
+                    <SkillChart skillName={"React"}></SkillChart>
+                    <SkillChart skillName={"JS"}></SkillChart>
+                  </div>
+                  <div>
+                    <SkillChart skillName={"CSS"}></SkillChart>
+                    <SkillChart skillName={"HTML"}></SkillChart>
+                  </div>
+                </div>
+              </>}
+            ></InfoSection>
+
+            {/* <div style={{display: "flex", height: "100vh"}}>
+              <div>
+                <SkillChart skillName={"React"}></SkillChart>
+                <SkillChart skillName={"JS"}></SkillChart>
+              </div>
+              <div>
+                <SkillChart skillName={"CSS"}></SkillChart>
+                <SkillChart skillName={"HTML"}></SkillChart>
+              </div>
             </div> */}
 
           </PageWrapper>

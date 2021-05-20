@@ -27,12 +27,17 @@ export const Grid = styled.div`
 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  width: 100%;
-  height: 100%;
+  width: 20vw;
+  height: 20vw;
 
-  border: 5px solid red; // Turn on for visibilty.
+  //border: 5px solid red; // Turn on for visibilty.
 
   grid-template-areas: "overlap";
+
+  @media screen and (max-width: 960px){
+    width: 35vw;
+    height: 35vw;
+  }
 `
 
 export const GridOverlapper = styled.div`
@@ -45,29 +50,42 @@ export const Text = styled.p`
   color: ${props => props.color || "white"};
   font-size: 2.5rem;
 
-  /* @media screen and (max-width: 960px){
-    margin-bottom: 20px;
-  } */
+  margin-top: 18vw;
+  grid-area: overlap;
+
+  @media screen and (max-width: 960px){
+    margin-top: 35vw;
+  }
 `
 
 export const ItemClipper = styled.div`
-  width: 20vw;
-  height: 10vw; 
+  width: 10vw;
+  height: 5vw; 
   //background-color: purple;  // Turn this on for visibility
 
   //display: flex;
   overflow: hidden; // hide the other semicircle
+
+  @media screen and (max-width: 960px){
+    width: 25vw;
+    height: 12.5vw;
+  }
 `
 
 export const DonutBaseClass = styled.div`
-  width: 20vw;
-  height: 20vw; 
+  width: 10vw;
+  height: 10vw; 
 
   box-sizing: border-box;
   border: 15px solid white;
   border-radius: 50%;
 
   transform: rotate(-45deg);
+
+  @media screen and (max-width: 960px){
+    width: 25vw;
+    height: 25vw;
+  }
 `
 
 export const UpperDonut = styled(DonutBaseClass)`
@@ -83,7 +101,7 @@ export const UpperDonut = styled(DonutBaseClass)`
 `
 
 export const LowerDonut = styled(DonutBaseClass)`
-  margin-top: -10vw; // get the bottom of the donut instead of the top
+  margin-top: -5vw; // get the bottom of the donut instead of the top
   //left: 30vw;
   border-color: #2ec02e #2ec02e #d12a2a #d12a2a;
 
@@ -92,8 +110,16 @@ export const LowerDonut = styled(DonutBaseClass)`
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
+
+  @media screen and (max-width: 960px){
+    margin-top: -12.5vw;
+  }
 `
 
 export const Checkmark = styled.img`
-  width: 15vw;
+  width: 7.5vw;
+
+  @media screen and (max-width: 960px){
+    width: 15vw;
+  }
 `
