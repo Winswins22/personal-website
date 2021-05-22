@@ -66,6 +66,22 @@ const InfoSection = ({title="", description="", img="", alt="Placeholder alt tex
           }
         </ItemWrapper>
 
+        {/* {
+          (img !== "") ? 
+            // Check if a div, component, etc or image
+            (typeof(img) === 'object') ?
+              <>{img}</>
+            :
+              <ItemWrapper style={{justifyContent:"center"}} data-aos='fade-left'>
+                <Img alt={alt} src={img}></Img>
+              </ItemWrapper>
+              
+          :
+            <ItemWrapper style={{justifyContent:"center"}} data-aos='fade-left'>
+              <EmptyImg></EmptyImg>
+            </ItemWrapper>
+        } */}
+
       </InfoSectionWrapper>
 
     </>

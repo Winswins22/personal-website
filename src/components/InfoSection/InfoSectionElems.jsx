@@ -67,9 +67,9 @@ export const Text = styled.p`
   color: ${props => props.color || "white"};
   font-size: 1.5rem;
 
-  @media screen and (max-width: 960px){
+  /* @media screen and (max-width: 960px){
     margin-bottom: 20px;
-  }
+  } */
 `
 
 export const AnimatedText = styled(Text)`
@@ -79,6 +79,11 @@ export const AnimatedText = styled(Text)`
     transition: font-size .5s;
     font-size: 2rem;
   }
+`
+
+export const Link = styled.a`
+  color: ${props => props.color || "white"};
+  font-size: 1.5rem;
 `
 
 export const EmptyImg = styled.div`
@@ -128,5 +133,5 @@ export const InfoSectionWrapper = styled.div`
 `
 
 export const NewLine = styled.div`
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 `

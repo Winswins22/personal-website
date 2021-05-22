@@ -16,7 +16,9 @@ import {
   Spacing, 
   AnimatedTitle, 
   Text,
-  AnimatedText
+  AnimatedText,
+  NewLine,
+  Link
 } from '../../components/InfoSection/InfoSectionElems'
 
 import Aos from 'aos'
@@ -75,7 +77,21 @@ function SkillPage({mode = "standard", initialLoading = 0}){
                 </div>
 
               </>} 
-              description={<> 
+
+              img={<>
+                <div style={{display: "flex"}}>
+                  <div>
+                    <SkillChart skillName={"React"}></SkillChart>
+                    <SkillChart skillName={"JS"}></SkillChart>
+                  </div>
+                  <div>
+                    <SkillChart skillName={"CSS"}></SkillChart>
+                    <SkillChart skillName={"HTML"}></SkillChart>
+                  </div>
+                </div>
+              </>}
+
+              description={<>
 
                 <div style={{display: "flex", wrap:"nowrap"}} data-aos="fade-left" data-aos-delay="1000">
                   <AnimatedText color={"grey"}> 
@@ -91,19 +107,22 @@ function SkillPage({mode = "standard", initialLoading = 0}){
                   </AnimatedText> 
                 </div>
 
-              </>}
+                <NewLine></NewLine>
 
-              img={<>
-                <div style={{display: "flex"}}>
-                  <div>
-                    <SkillChart skillName={"React"}></SkillChart>
-                    <SkillChart skillName={"JS"}></SkillChart>
-                  </div>
-                  <div>
-                    <SkillChart skillName={"CSS"}></SkillChart>
-                    <SkillChart skillName={"HTML"}></SkillChart>
-                  </div>
+                <div data-aos="fade-left" data-aos-delay="1000">
+
+                  <Text> I have experience creating websites with React, HTML, JS, and CSS in a school setting. I am looking for a professional oppurtunity to apply my skills to create a responsive, interactive, and user-friendly website. </Text>
+
+                  <NewLine></NewLine>
+
+                  <Text> I have created a website for <Link href="https://codingclub.bethuneci.com/">my school's Coding Club</Link>, a website to host my <Link href="https://winswins22.github.io/English-Portfolio/">English project</Link>, and the current website you are viewing.  </Text>
+
+                  <NewLine></NewLine>
+
+                  <Text> I am looking to gain more experience in creating website with exciting new technologies.  </Text>
+
                 </div>
+
               </>}
             ></InfoSection>
 
