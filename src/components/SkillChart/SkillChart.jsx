@@ -54,7 +54,9 @@ const SkillChart = ({skillName = "", useCheckmark = true}) => {
           {
             showCheckmarks ?
               <GridOverlapper>
-                <Checkmark src={CheckmarkImage} data-aos="zoom-in"></Checkmark>
+                <div data-aos="zoom-in">
+                  <Checkmark src={CheckmarkImage}></Checkmark>
+                </div>
               </GridOverlapper>
             : 
               <></>

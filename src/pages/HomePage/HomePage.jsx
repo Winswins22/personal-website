@@ -68,7 +68,8 @@ function HomePage({mode = "standard", initialLoading = 0}){
 
                 <div style={{display: "flex", flexWrap: "wrap"}} data-aos="fade-left" data-aos-delay="1000">
                   <AnimatedTitle> web </AnimatedTitle>
-                  <Spacing></Spacing><Spacing></Spacing>
+                  <Spacing></Spacing>
+                  <Spacing></Spacing>
                   <AnimatedTitle> developer </AnimatedTitle>
                 </div>
               </>} 

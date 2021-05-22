@@ -9,11 +9,11 @@ import HomePage from './pages/HomePage/HomePage'
 import AboutPage from './pages/AboutPage/AboutPage'
 import SkillsPage from './pages/SkillsPage/SkillsPage'
 import ContactPage from './pages/ContactPage/ContactPage'
-import Loader from './components/Loader/Loader'
+//import Loader from './components/Loader/Loader'
 
 function App() {
 
-  console.log("Debug: v0.0.04")
+  console.log("Debug: v0.0.05")
 
   return (
     <>

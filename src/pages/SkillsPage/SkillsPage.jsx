@@ -13,6 +13,10 @@ import {
 } from '../../components/SkillChart/SkillChartElems'
 
 import {
+  SizeWrapper
+} from './Elems'
+
+import {
   Spacing, 
   AnimatedTitle, 
   Text,
@@ -65,17 +69,18 @@ function SkillPage({mode = "standard", initialLoading = 0}){
 
             <InfoSection 
               title={<>
+                <SizeWrapper>
+                  <div style={{display:"flex", flexWrap:"wrap"}}>
+                    <AnimatedTitle> Skills </AnimatedTitle>
+                    <Spacing></Spacing>
+                    <Spacing></Spacing>
+                    <AnimatedTitle> and </AnimatedTitle>
+                  </div>
 
-                <div style={{display:"flex", flexWrap:"wrap"}}>
-                  <AnimatedTitle> Skills </AnimatedTitle>
-                  <Spacing></Spacing>
-                  <Spacing></Spacing>
-                  <AnimatedTitle> and </AnimatedTitle>
-                </div>
-
-                <div style={{display:"flex", flexWrap:"nowrap"}}>
-                  <AnimatedTitle> Experience </AnimatedTitle>
-                </div>
+                  <div style={{display:"flex", flexWrap:"nowrap"}}>
+                    <AnimatedTitle> Experience </AnimatedTitle>
+                  </div>
+                </SizeWrapper>
 
               </>} 
 
@@ -94,35 +99,39 @@ function SkillPage({mode = "standard", initialLoading = 0}){
 
               description={<>
 
-                <div style={{display: "flex", wrap:"nowrap"}} data-aos="fade-left" data-aos-delay="1000">
-                  <AnimatedText color={"grey"}> 
-                    Front End Developer
-                  </AnimatedText> 
-                  <Spacing></Spacing>
-                  <Text color={"grey"}> 
-                    |
-                  </Text> 
-                  <Spacing></Spacing>
-                  <AnimatedText color={"grey"}> 
-                    React Developer 
-                  </AnimatedText> 
-                </div>
+                <SizeWrapper>
 
-                <NewLine></NewLine>
-
-                <div data-aos="fade-left" data-aos-delay="1000">
-
-                  <AnimatedColorText> I have experience creating websites with React, HTML, JS, and CSS in a school setting. I am looking for a professional oppurtunity to apply my skills to create a responsive, interactive, and user-friendly website. </AnimatedColorText>
+                  <div style={{display: "flex", wrap:"nowrap"}} data-aos="fade-left" data-aos-delay="1000">
+                    <AnimatedText color={"grey"}> 
+                      Front End Developer
+                    </AnimatedText> 
+                    <Spacing></Spacing>
+                    <Text color={"grey"}> 
+                      |
+                    </Text> 
+                    <Spacing></Spacing>
+                    <AnimatedText color={"grey"}> 
+                      React Developer 
+                    </AnimatedText> 
+                  </div>
 
                   <NewLine></NewLine>
 
-                  <AnimatedColorText> I have worked in a team to create a website for <Link href="https://codingclub.bethuneci.com/">our school's Coding Club</Link>, a website to host my <Link href="https://winswins22.github.io/English-Portfolio/">English project</Link>, and the current website you are viewing.  </AnimatedColorText>
+                  <div data-aos="fade-left" data-aos-delay="1000">
 
-                  <NewLine></NewLine>
+                    <AnimatedColorText> I have experience creating websites with React, HTML, JS, and CSS in a school setting. I am looking for a professional oppurtunity to apply my skills to create a responsive, interactive, and user-friendly website. </AnimatedColorText>
 
-                  <AnimatedColorText> I am looking to gain more experience in creating websites with exciting new technologies.  </AnimatedColorText>
+                    <NewLine></NewLine>
 
-                </div>
+                    <AnimatedColorText> I have worked in a team to create a website for <Link href="https://codingclub.bethuneci.com/">our school's Coding Club</Link>, a website to host my <Link href="https://winswins22.github.io/English-Portfolio/">English project</Link>, and the current website you are viewing.  </AnimatedColorText>
+
+                    <NewLine></NewLine>
+
+                    <AnimatedColorText> I am looking to gain more experience in creating websites with exciting new technologies.  </AnimatedColorText>
+
+                  </div>
+
+                </SizeWrapper>
 
               </>}
             ></InfoSection>

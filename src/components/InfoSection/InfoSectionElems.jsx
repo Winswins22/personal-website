@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const LeftSection = styled.div`
   width: 70vw;
@@ -31,14 +31,38 @@ export const Spacing = styled.div`
   width: 10px;
 `
 
+const PopTitleText = keyframes`
+  0% {
+    font-size: 6.5rem;
+  }
+  50%{
+    font-size: 7.5rem;
+  }
+  100% {
+    font-size: 6.5rem;
+  }
+`
+
+const PopMobileTitleText = keyframes`
+  0% {
+    font-size: 5.5rem;
+  }
+  50%{
+    font-size: 6.5rem;
+  }
+  100% {
+    font-size: 5.5rem;
+  }
+`
+
 export const HeadingText = styled.p`
   color: white;
   text-align: left;
-  font-size: 7.5rem;
+  font-size: 6.5rem;
   //margin-right: 10rem;
 
   @media screen and (max-width: 960px){
-    font-size: 4.5rem;
+    font-size: 5.5rem;
   }
 `
 
@@ -50,8 +74,11 @@ export const AnimatedTitle = styled(HeadingText)`
 
   @media screen and (min-width: 960px){
     :hover{
+      font-size: 7.5rem;
       transition: font-size .5s;
-      font-size: 8.5rem;
+      animation-name: ${PopTitleText};
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -59,7 +86,22 @@ export const AnimatedTitle = styled(HeadingText)`
     :hover{
       transition: font-size .5s;
       font-size: 5.5rem;
+      animation-name: ${PopMobileTitleText};
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
     }
+  }
+`
+
+const PopText = keyframes`
+  0% {
+    font-size: 1.5rem;
+  }
+  50%{
+    font-size: 1.75rem;
+  }
+  100% {
+    font-size: 1.5rem;
   }
 `
 
@@ -76,8 +118,12 @@ export const AnimatedText = styled(Text)`
   :hover{
     color: #2ec02e;
     transition: color .5s;
-    transition: font-size .5s;
-    font-size: 2rem;
+    /* transition: font-size .5s;
+    font-size: 2rem; */
+
+    animation-name: ${PopText};
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
   }
 `
 
@@ -147,3 +193,21 @@ export const InfoSectionWrapper = styled.div`
 export const NewLine = styled.div`
   margin-bottom: 10px;
 `
+
+// Text pop animation
+// :before{
+//   content: "";
+//   transition: font-size .5s;
+//   font-size: 7.5rem;
+//   /* transition: border .5s;
+//   border: 10px solid red; */
+// }
+// :hover{
+//   :before{
+//     content: "";
+//     transition: font-size .5s;
+//     font-size: 8.5rem;
+//     /* transition: border .5s;
+//     border: 10px solid green; */
+//   }
+// }

@@ -61,6 +61,18 @@ export const GridOverlapper = styled.div`
   grid-area: overlap;
 ` 
 
+const PopText = keyframes`
+  0% {
+    font-size: 2.5rem;
+  }
+  50%{
+    font-size: 3rem;
+  }
+  100% {
+    font-size: 2.5rem;
+  }
+`
+
 export const ModdedAnimatedText = styled(AnimatedText)`
   text-align: center;
   color: ${props => props.color || "white"};
@@ -78,8 +90,10 @@ export const ModdedAnimatedText = styled(AnimatedText)`
   :hover{
     color: #2ec02e;
     transition: color .5s;
-    transition: font-size .5s;
-    font-size: 3rem;
+    
+    animation-name: ${PopText};
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
   }
 
   @media screen and (max-width: 960px){
@@ -150,6 +164,36 @@ export const LowerDonut = styled(DonutBaseClass)`
   }
 `
 
+const PopCheckmark = keyframes`
+  0% {
+    margin-top: 2.5vw;
+    width: 7.5vw;
+  }
+  50%{
+    margin-top: 2vw;
+    width: 9.5vw;
+  }
+  100% {
+    margin-top: 2.5vw;
+    width: 7.5vw;
+  }
+`
+
+const PopMobileCheckmark = keyframes`
+  0% {
+    margin-top: 7.5vw;
+    width: 15vw;
+  }
+  50%{
+    margin-top: 6vw;
+    width: 19vw;
+  }
+  100% {
+    margin-top: 7.5vw;
+    width: 15vw;
+  }
+`
+
 export const Checkmark = styled.img`
   margin-top: 2.5vw;
   width: 7.5vw;
@@ -157,5 +201,27 @@ export const Checkmark = styled.img`
   @media screen and (max-width: 960px){
     margin-top: 7.5vw;
     width: 15vw;
+  }
+
+  :hover{
+    /* margin-top: 2vw;
+    width: 9.5vw;
+    transition: margin-top .5s;
+    transition: width .5s; */
+    animation-name: ${PopCheckmark};
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
+  @media screen and (max-width: 960px){
+    :hover{
+      /* margin-top: 6vw;
+      width: 19vw;
+      transition: margin-top .5s;
+      transition: width .5s; */
+      animation-name: ${PopMobileCheckmark};
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
+    }
   }
 `
