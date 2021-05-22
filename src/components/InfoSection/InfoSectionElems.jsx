@@ -81,9 +81,21 @@ export const AnimatedText = styled(Text)`
   }
 `
 
+export const AnimatedColorText = styled(Text)`
+  :hover{
+    color: #2ec02e;
+    transition: color .5s;
+  }
+`
+
 export const Link = styled.a`
   color: ${props => props.color || "white"};
   font-size: 1.5rem;
+
+  :hover{
+    color: #2c74b2;
+    transition: color .5s;
+  }
 `
 
 export const EmptyImg = styled.div`

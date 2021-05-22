@@ -5,3 +5,4 @@ lighter black: #1c1b5e
 
 green: #2ec02e
 red: #d12a2a
+blue: #2c74b2
