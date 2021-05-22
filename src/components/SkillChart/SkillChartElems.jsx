@@ -1,6 +1,8 @@
 import styled, {keyframes} from 'styled-components'
 
-//import {animated} from 'react-spring'
+import {
+  AnimatedText
+} from '../../components/InfoSection/InfoSectionElems'
 
 // Speed up (ease-in)
 const FillTopDonut = keyframes`
@@ -22,13 +24,25 @@ const FillBotDonut = keyframes`
   }
 `
 
-export const Grid = styled.div`
+export const GridHitbox = styled.div`
+
+  width: 20vw;
+  height: 17.5vw;
+
+  @media screen and (max-width: 960px){
+    width: 35vw;
+    height: 35vw;
+  }
+
+`
+
+export const Grid = styled(GridHitbox)`
   display: grid;
 
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   width: 20vw;
-  height: 20vw;
+  height: 17.5vw;
 
   //border: 5px solid red; // Turn on for visibilty.
 
@@ -41,20 +55,40 @@ export const Grid = styled.div`
 `
 
 export const GridOverlapper = styled.div`
-  margin: auto;
+  //margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   grid-area: overlap;
 ` 
 
-export const Text = styled.p`
+export const ModdedAnimatedText = styled(AnimatedText)`
   text-align: center;
   color: ${props => props.color || "white"};
   font-size: 2.5rem;
 
-  margin-top: 18vw;
+  margin-top: 12.5vw;
   grid-area: overlap;
 
+  z-index: 80; // Text needs hitbox, donut was previously covering this text
+
   @media screen and (max-width: 960px){
-    margin-top: 35vw;
+    margin-top: 25vw;
+  }
+
+  :hover{
+    color: #2ec02e;
+    transition: color .5s;
+    transition: font-size .5s;
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 960px){
+    :hover{
+      color: #2ec02e;
+      transition: color .5s;
+      transition: font-size .5s;
+      font-size: 2.75rem;
+    }
   }
 `
 
@@ -117,9 +151,11 @@ export const LowerDonut = styled(DonutBaseClass)`
 `
 
 export const Checkmark = styled.img`
+  margin-top: 2.5vw;
   width: 7.5vw;
 
   @media screen and (max-width: 960px){
+    margin-top: 7.5vw;
     width: 15vw;
   }
 `

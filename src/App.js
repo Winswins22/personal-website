@@ -13,7 +13,7 @@ import Loader from './components/Loader/Loader'
 
 function App() {
 
-  console.log("Debug: v0.0.03")
+  console.log("Debug: v0.0.04")
 
   return (
     <>

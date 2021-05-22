@@ -52,6 +52,18 @@ function AboutPage({mode = "standard", initialLoading = 0}){
                   <Item2></Item2>
                 {/* </ItemWrapper> */}
               </Grid2x2>
+              <Item1></Item1>
+              <Item2></Item2>
+              <Item1></Item1>
+              <Item2></Item2>
+              <Item1></Item1>
+              <Item2></Item2>
+              <Item1></Item1>
+              <Item2></Item2>
+              <Item1></Item1>
+              <Item2></Item2>
+              <Item1></Item1>
+              <Item2></Item2>
             
           </PageWrapper>
 

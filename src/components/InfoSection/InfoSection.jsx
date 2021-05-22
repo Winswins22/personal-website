@@ -56,7 +56,7 @@ const InfoSection = ({title="", description="", img="", alt="Placeholder alt tex
         <ItemWrapper style={{justifyContent:"center"}} data-aos='fade-left'>
           {
             (img !== "") ? 
-              // A div, component, etc
+              // Check if a div, component, etc or image
               (typeof(img) === 'object') ?
                 <>{img}</>
               :

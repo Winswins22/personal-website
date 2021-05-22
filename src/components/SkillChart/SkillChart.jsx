@@ -3,13 +3,13 @@ import {
   UpperDonut,
   LowerDonut,
   Checkmark,
-  Text,
+  ModdedAnimatedText,
   Grid,
   GridOverlapper
 } from "./SkillChartElems"
 //import { useSpring } from 'react-spring'
 
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css/'
@@ -22,10 +22,21 @@ import CheckmarkImage from '../../images/checkmark.png'
 
 const SkillChart = ({skillName = "", useCheckmark = true}) => {
 
+  const [showCheckmarks, toggleCheckmarks] = useState(false);
+
   //Animate on Scroll
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      (useCheckmark === true) ? 
+        toggleCheckmarks(true)
+      :
+        toggleCheckmarks(false)
+    }, 1700)
+  })
   
   return (
     <>
@@ -41,16 +52,16 @@ const SkillChart = ({skillName = "", useCheckmark = true}) => {
             </ItemClipper>
           </GridOverlapper>
           {
-            useCheckmark ?
+            showCheckmarks ?
               <GridOverlapper>
-                <Checkmark src={CheckmarkImage} data-aos="zoom-in" data-aos-delay="1700"></Checkmark>
+                <Checkmark src={CheckmarkImage} data-aos="zoom-in"></Checkmark>
               </GridOverlapper>
             : 
               <></>
           }
           {        
             (skillName !== "")?
-              <Text> {skillName} </Text>
+              <ModdedAnimatedText> {skillName} </ModdedAnimatedText>
             : 
               <></>
           }

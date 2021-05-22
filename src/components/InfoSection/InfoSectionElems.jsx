@@ -27,11 +27,11 @@ export const Img = styled.img`
   }
 `
 
-export const TitleSpacing = styled.div`
+export const Spacing = styled.div`
   width: 10px;
 `
 
-export const AnimatedTitle = styled.p`
+export const HeadingText = styled.p`
   color: white;
   text-align: left;
   font-size: 7.5rem;
@@ -40,11 +40,44 @@ export const AnimatedTitle = styled.p`
   @media screen and (max-width: 960px){
     font-size: 4.5rem;
   }
+`
 
-  transition: color 10s ease-in-out;
-
+export const AnimatedTitle = styled(HeadingText)`
   :hover{
     color: #2ec02e;
+    transition: color .5s;
+  }
+
+  @media screen and (min-width: 960px){
+    :hover{
+      transition: font-size .5s;
+      font-size: 8.5rem;
+    }
+  }
+
+  @media screen and (max-width: 960px){
+    :hover{
+      transition: font-size .5s;
+      font-size: 5.5rem;
+    }
+  }
+`
+
+export const Text = styled.p`
+  color: ${props => props.color || "white"};
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 960px){
+    margin-bottom: 20px;
+  }
+`
+
+export const AnimatedText = styled(Text)`
+  :hover{
+    color: #2ec02e;
+    transition: color .5s;
+    transition: font-size .5s;
+    font-size: 2rem;
   }
 `
 
@@ -91,29 +124,6 @@ export const InfoSectionWrapper = styled.div`
   @media screen and (max-width: 960px){
     flex-direction: column;
     margin-bottom: 50px;
-  }
-`
-
-export const HeadingText = styled.p`
-  margin: auto;
-  margin-left: 0px;
-
-  color: white;
-  text-align: left;
-  font-size: 10rem;
-
-  @media screen and (max-width: 960px){
-    font-size: 4.5rem;
-    margin-bottom: 20px;
-  }
-`
-
-export const Text = styled.p`
-  color: ${props => props.color || "white"};
-  font-size: 1.5rem;
-
-  @media screen and (max-width: 960px){
-    margin-bottom: 20px;
   }
 `
 

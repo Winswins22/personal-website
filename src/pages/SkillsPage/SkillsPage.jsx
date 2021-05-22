@@ -9,9 +9,14 @@ import SkillChart from '../../components/SkillChart/SkillChart'
 import InfoSection from '../../components/InfoSection/InfoSection'
 
 import {
-  TitleSpacing, 
+  GridHitbox
+} from '../../components/SkillChart/SkillChartElems'
+
+import {
+  Spacing, 
   AnimatedTitle, 
-  Text
+  Text,
+  AnimatedText
 } from '../../components/InfoSection/InfoSectionElems'
 
 import Aos from 'aos'
@@ -57,17 +62,39 @@ function SkillPage({mode = "standard", initialLoading = 0}){
 
             <InfoSection 
               title={<>
-              <div style={{display:"flex", flexWrap:"wrap"}}>
-                <AnimatedTitle> Skills and </AnimatedTitle>
-                <AnimatedTitle> Experience </AnimatedTitle>
-              </div>
+
+                <div style={{display:"flex", flexWrap:"wrap"}}>
+                  <AnimatedTitle> Skills </AnimatedTitle>
+                  <Spacing></Spacing>
+                  <Spacing></Spacing>
+                  <AnimatedTitle> and </AnimatedTitle>
+                </div>
+
+                <div style={{display:"flex", flexWrap:"nowrap"}}>
+                  <AnimatedTitle> Experience </AnimatedTitle>
+                </div>
+
               </>} 
-              description={<> <Text data-aos="fade-left" data-aos-delay="1000" color={"grey"}> 
-                Front End Developer | React Developer 
-              </Text> </>}
+              description={<> 
+
+                <div style={{display: "flex", wrap:"nowrap"}} data-aos="fade-left" data-aos-delay="1000">
+                  <AnimatedText color={"grey"}> 
+                    Front End Developer
+                  </AnimatedText> 
+                  <Spacing></Spacing>
+                  <Text color={"grey"}> 
+                    |
+                  </Text> 
+                  <Spacing></Spacing>
+                  <AnimatedText color={"grey"}> 
+                    React Developer 
+                  </AnimatedText> 
+                </div>
+
+              </>}
 
               img={<>
-                <div style={{display: "flex", height: "100vh"}}>
+                <div style={{display: "flex"}}>
                   <div>
                     <SkillChart skillName={"React"}></SkillChart>
                     <SkillChart skillName={"JS"}></SkillChart>

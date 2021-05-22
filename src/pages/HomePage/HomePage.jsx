@@ -9,10 +9,11 @@ import 'aos/dist/aos.css/'
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
 import {
-  TitleSpacing, 
+  Spacing, 
   AnimatedTitle, 
   LogoAsText,
-  Text
+  Text,
+  AnimatedText
 } from '../../components/InfoSection/InfoSectionElems'
 
 import Logo from '../../images/logo.png'
@@ -50,26 +51,44 @@ function HomePage({mode = "standard", initialLoading = 0}){
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            
+
             <InfoSection 
               title={<>
-                <AnimatedTitle data-aos="fade-down"> Hi, </AnimatedTitle>
-                
-                {/* <AnimatedTitle data-aos="fade-right" data-aos-delay="500"> I'm Winston </AnimatedTitle> */}
-                <div style={{display: "flex", flexWrap: "wrap"}}>
-                  <AnimatedTitle data-aos="fade-right" data-aos-delay="500"> I'm </AnimatedTitle>
-                  <TitleSpacing></TitleSpacing>
-                  <LogoAsText data-aos="fade-right" data-aos-delay="500" src={Logo} alt={"'W' Logo"}></LogoAsText>
-                  <AnimatedTitle data-aos="fade-right" data-aos-delay="500"> inston, </AnimatedTitle>
+                <div style={{display: "flex", flexWrap: "wrap"}} data-aos="fade-down">
+                  <AnimatedTitle> Hi, </AnimatedTitle>
                 </div>
 
-                <div style={{display: "flex", flexWrap: "wrap"}}>
-                  <AnimatedTitle data-aos="fade-left" data-aos-delay="1000"> web </AnimatedTitle>
-                  <TitleSpacing></TitleSpacing><TitleSpacing></TitleSpacing>
-                  <AnimatedTitle data-aos="fade-left" data-aos-delay="1000"> developer </AnimatedTitle>
+                <div style={{display: "flex", flexWrap: "nowrap"}} data-aos="fade-right" data-aos-delay="500">
+                  <AnimatedTitle> I'm </AnimatedTitle>
+                  <Spacing></Spacing>
+                  <Spacing></Spacing>
+                  <LogoAsText src={Logo} alt={"'W' Logo"}></LogoAsText>
+                  <AnimatedTitle> inston, </AnimatedTitle>
+                </div>
+
+                <div style={{display: "flex", flexWrap: "wrap"}} data-aos="fade-left" data-aos-delay="1000">
+                  <AnimatedTitle> web </AnimatedTitle>
+                  <Spacing></Spacing><Spacing></Spacing>
+                  <AnimatedTitle> developer </AnimatedTitle>
                 </div>
               </>} 
-              description={<> <Text data-aos="fade-left" data-aos-delay="1000" color={"grey"}> Front End Developer | React Developer </Text> </>}
+              description={<> 
+
+                <div style={{display: "flex", wrap:"nowrap"}} data-aos="fade-left" data-aos-delay="1000">
+                  <AnimatedText color={"grey"}> 
+                    Front End Developer
+                  </AnimatedText> 
+                  <Spacing></Spacing>
+                  <Text color={"grey"}> 
+                    |
+                  </Text> 
+                  <Spacing></Spacing>
+                  <AnimatedText color={"grey"}> 
+                    React Developer 
+                  </AnimatedText> 
+                </div>
+
+              </>}
             ></InfoSection>
             
             {/* <InfoSection 
