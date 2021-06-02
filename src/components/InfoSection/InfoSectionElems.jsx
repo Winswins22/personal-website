@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components'
+import {Link} from 'react-router-dom'
 
 export const LeftSection = styled.div`
   width: 70vw;
@@ -71,7 +72,7 @@ export const AnimatedTitle = styled(HeadingText)`
     color: #2ec02e;
     transition: color .5s;
   }
-
+/* 
   @media screen and (min-width: 960px){
     :hover{
       font-size: 7.5rem;
@@ -90,7 +91,7 @@ export const AnimatedTitle = styled(HeadingText)`
       animation-duration: 0.7s;
       animation-fill-mode: forwards;
     }
-  }
+  } */
 `
 
 const PopText = keyframes`
@@ -121,9 +122,9 @@ export const AnimatedText = styled(Text)`
     /* transition: font-size .5s;
     font-size: 2rem; */
 
-    animation-name: ${PopText};
+    /* animation-name: ${PopText};
     animation-duration: 0.7s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
   }
 `
 
@@ -134,8 +135,18 @@ export const AnimatedColorText = styled(Text)`
   }
 `
 
-export const Link = styled.a`
-  color: ${props => props.color || "white"};
+export const WebLink = styled.a`
+  color: #55b4cc;
+  font-size: 1.5rem;
+
+  :hover{
+    color: #2c74b2;
+    transition: color .5s;
+  }
+`
+
+export const PageLink = styled(Link)`
+  color: #55b4cc;
   font-size: 1.5rem;
 
   :hover{

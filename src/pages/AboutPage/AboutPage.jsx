@@ -5,14 +5,18 @@ import Loader from '../../components/Loader/Loader'
 
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
-import {
-  Grid,
-  Item1,
-  Item2,
-  ItemWrapper
-} from './test'
+import InfoSection from '../../components/InfoSection/InfoSection'
 
-import Grid2x2 from '../../components/Grid2x2/Grid2x2'
+import {
+  Spacing, 
+  AnimatedTitle, 
+  Text,
+  AnimatedText,
+  NewLine,
+  WebLink,
+  AnimatedColorText,
+  PageLink
+} from '../../components/InfoSection/InfoSectionElems'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
@@ -24,14 +28,15 @@ import Grid2x2 from '../../components/Grid2x2/Grid2x2'
 // Set to '"fastest"' for a faster animation with a very fast bar fill
 
 // See src/components/Loader/LoaderTimings.jsx for more details.
-function AboutPage({mode = "standard", initialLoading = 0}){
+
+function AboutPage({initialLoading = 0, mode="standard"}){
+
   const [timesLoaded, setLoading] = useState(initialLoading);
 
   useEffect(() => {
     setTimeout(() => {
       if (timesLoaded !== 1){
         setLoading(1);
-        //console.log("Set 'timesLoaded' to 1!", timesLoaded)
       }
     }, getFinishTimeFromMode(mode))
   })
@@ -42,30 +47,58 @@ function AboutPage({mode = "standard", initialLoading = 0}){
       {
         (timesLoaded === 1) ? 
           
-          <PageWrapper>
-            
-              <Grid2x2>
-                {/* <ItemWrapper> */}
-                  <Item1></Item1>
-                  <Item2></Item2>
-                  <Item1></Item1>
-                  <Item2></Item2>
-                {/* </ItemWrapper> */}
-              </Grid2x2>
-              <Item1></Item1>
-              <Item2></Item2>
-              <Item1></Item1>
-              <Item2></Item2>
-              <Item1></Item1>
-              <Item2></Item2>
-              <Item1></Item1>
-              <Item2></Item2>
-              <Item1></Item1>
-              <Item2></Item2>
-              <Item1></Item1>
-              <Item2></Item2>
-            
-          </PageWrapper>
+        <PageWrapper>
+
+        <InfoSection 
+          title={<>
+            <div style={{display:"flex", flexWrap:"wrap"}}>
+              <AnimatedTitle> About </AnimatedTitle>
+              <Spacing></Spacing>
+              <Spacing></Spacing>
+              <AnimatedTitle> Me </AnimatedTitle>
+            </div>
+          </>} 
+
+          description={<>
+
+            <div style={{display: "flex", wrap:"nowrap"}} data-aos="fade-left" data-aos-delay="750">
+              <AnimatedText color={"grey"}> 
+                Front End Developer
+              </AnimatedText> 
+              <Spacing></Spacing>
+              <Text color={"grey"}> 
+                |
+              </Text> 
+              <Spacing></Spacing>
+              <AnimatedText color={"grey"}> 
+                React Developer 
+              </AnimatedText> 
+            </div>
+
+            <NewLine></NewLine>
+
+            <div data-aos="fade-left" data-aos-delay="750">
+
+              <Text> I am a front-end developer in Ontario, Canada. I am interested in expanding my knowledge of components for the front-end and learning how to set up a back-end to communicate with the front-end. </Text>
+
+              <NewLine></NewLine>
+
+              <Text> I have been an exec in <WebLink href="https://codingclub.bethuneci.com/">my school's Coding Club</WebLink> for a year, and I have both taught others how to create websites and picked up many useful pieces of knowledge to enhance my programming skills. </Text>
+
+              <NewLine></NewLine>
+
+              <Text> Looking for a professional oppurtunity to apply my front-end skills with motivated and positive people. </Text>
+              
+              <NewLine></NewLine>
+
+              <Text> <PageLink to={'/contact'}> Let's make something special. </PageLink>  </Text>
+
+            </div>
+
+          </>}
+        ></InfoSection>
+
+      </PageWrapper>
 
         :
           <Loader mode={mode}></Loader>

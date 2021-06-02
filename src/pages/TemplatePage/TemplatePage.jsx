@@ -5,6 +5,19 @@ import Loader from '../../components/Loader/Loader'
 
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css/'
+
+import {
+  Spacing, 
+  AnimatedTitle, 
+  Text,
+  AnimatedText,
+  NewLine,
+  Link,
+  AnimatedColorText
+} from '../../components/InfoSection/InfoSectionElems'
+
 // initialLoading:
 // Set to '1' to skip loader animation.
 
@@ -16,7 +29,12 @@ import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
 // See src/components/Loader/LoaderTimings.jsx for more details.
 
-function HomePage({initialLoading = 0, mode="standard"}){
+function HomePage({initialLoading = 0, mode="fast"}){
+
+  //Animate on Scroll
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
   const [timesLoaded, setLoading] = useState(initialLoading);
 

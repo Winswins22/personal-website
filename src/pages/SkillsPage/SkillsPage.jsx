@@ -8,9 +8,9 @@ import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 import SkillChart from '../../components/SkillChart/SkillChart'
 import InfoSection from '../../components/InfoSection/InfoSection'
 
-import {
-  GridHitbox
-} from '../../components/SkillChart/SkillChartElems'
+// import {
+//   GridHitbox
+// } from '../../components/SkillChart/SkillChartElems'
 
 import {
   SizeWrapper
@@ -22,7 +22,7 @@ import {
   Text,
   AnimatedText,
   NewLine,
-  Link,
+  WebLink,
   AnimatedColorText
 } from '../../components/InfoSection/InfoSectionElems'
 
@@ -41,7 +41,7 @@ import Logo from '../../images/logo.png'
 // Set to '"fastest"' for a faster animation with a very fast bar fill
 
 // See src/components/Loader/LoaderTimings.jsx for more details.
-function SkillPage({mode = "standard", initialLoading = 0}){
+function SkillPage({mode = "fast", initialLoading = 0}){
   const [timesLoaded, setLoading] = useState(initialLoading);
 
   //Animate on Scroll
@@ -119,16 +119,16 @@ function SkillPage({mode = "standard", initialLoading = 0}){
 
                   <div data-aos="fade-left" data-aos-delay="1000">
 
-                    <AnimatedColorText> I have experience creating websites with React, HTML, JS, and CSS in a school setting. I am looking for a professional oppurtunity to apply my skills to create a responsive, interactive, and user-friendly website. </AnimatedColorText>
+                    <Text> I have experience creating websites with React, HTML, JS, and CSS in a school setting. I am looking for a professional oppurtunity to apply my skills to create a responsive, interactive, and user-friendly website. </Text>
 
                     <NewLine></NewLine>
 
-                    <AnimatedColorText> I have worked in a team to create a website for <Link href="https://codingclub.bethuneci.com/">our school's Coding Club</Link>, a website to host my <Link href="https://winswins22.github.io/English-Portfolio/">English project</Link>, and the current website you are viewing.  </AnimatedColorText>
+                    <Text> I have worked in a team to create a website for <WebLink href="https://codingclub.bethuneci.com/">our school's Coding Club</WebLink>, a website to host my <WebLink href="https://winswins22.github.io/English-Portfolio/">English project</WebLink>, and the current website you are viewing.  </Text>
 
                     <NewLine></NewLine>
 
-                    <AnimatedColorText> I am looking to gain more experience in creating websites with exciting new technologies.  </AnimatedColorText>
-
+                    <Text> I am looking to gain more experience in creating websites with exciting new technologies.  </Text>
+                  
                   </div>
 
                 </SizeWrapper>

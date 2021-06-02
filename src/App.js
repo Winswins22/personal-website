@@ -11,6 +11,8 @@ import SkillsPage from './pages/SkillsPage/SkillsPage'
 import ContactPage from './pages/ContactPage/ContactPage'
 //import Loader from './components/Loader/Loader'
 
+import TestPage from './pages/TestPage/TestPage'
+
 function App() {
 
   console.log("Debug: v0.0.05")
@@ -25,6 +27,7 @@ function App() {
           <Route path='/about' component={AboutPage}></Route>
           <Route path='/skills' component={SkillsPage}></Route>
           <Route path='/contact' component={ContactPage}></Route>
+          <Route path='/test' component={TestPage}></Route>
         </Switch>
         
       </Router>
