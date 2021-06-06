@@ -5,6 +5,8 @@ import Loader from '../../components/Loader/Loader'
 
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
+import ContactForm from '../../components/ContactForm/ContactForm'
+
 // initialLoading:
 // Set to '1' to skip loader animation.
 
@@ -34,7 +36,7 @@ function ContactPage({mode = "standard", initialLoading = 0}){
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            Contact
+            <ContactForm></ContactForm>
           </PageWrapper>
 
         :
