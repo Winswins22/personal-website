@@ -28,7 +28,7 @@ export default function ContactForm() {
         }, 5000)
     }
     else{
-        setMessage("Send failed. Email me at winswins2222@gmail.com");
+        setMessage("Send failed. (Oops!) Please email me at winswins2222@gmail.com");
         setColor("#d12a2a");
     }
   }, [emailState])

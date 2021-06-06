@@ -16,7 +16,7 @@ import {
   WebLink,
   AnimatedColorText,
   PageLink
-} from '../../components/InfoSection/InfoSectionElems'
+} from '../../GlobalElems'
 
 // initialLoading:
 // Set to '1' to skip loader animation.

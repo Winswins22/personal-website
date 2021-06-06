@@ -6,6 +6,8 @@ export const FormInput = styled.input`
 
   color: white;
   font-size: 1.5rem;
+
+  padding: 5px;
 `
 
 export const FormInputBox = styled.textarea`
@@ -14,6 +16,8 @@ export const FormInputBox = styled.textarea`
 
   color: white;
   font-size: 1.5rem;
+
+  padding: 5px;
 `
 
 export const FlexContainer = styled.div`

@@ -17,7 +17,7 @@ import ContactForm from '../../components/ContactForm/ContactForm'
 // Set to '"fastest"' for a faster animation with a very fast bar fill
 
 // See src/components/Loader/LoaderTimings.jsx for more details.
-function ContactPage({mode = "standard", initialLoading = 0}){
+function ContactPage({mode = "fast", initialLoading = 0}){
   const [timesLoaded, setLoading] = useState(initialLoading);
 
   useEffect(() => {

@@ -1,5 +1,16 @@
 import styled, {keyframes} from 'styled-components'
-import {Link} from 'react-router-dom'
+
+import {
+  Text,
+  AnimatedColorText,
+  WebLink,
+  PageLink,
+  NewLine,
+  Spacing,
+  HeadingText,
+  LogoAsText,
+  AnimatedTitle
+} from '../../GlobalElems'
 
 export const LeftSection = styled.div`
   width: 70vw;
@@ -9,12 +20,7 @@ export const LeftSection = styled.div`
   }
 `
 
-export const LogoAsText = styled.img`
-  width: 120px;
-
-  @media screen and (max-width: 960px){
-    width: 80px;
-  }
+export const InfoLogoAsText = styled(LogoAsText)`
 `
 
 export const Img = styled.img`
@@ -28,8 +34,7 @@ export const Img = styled.img`
   }
 `
 
-export const Spacing = styled.div`
-  width: 10px;
+export const InfoSpacing = styled(Spacing)`
 `
 
 const PopTitleText = keyframes`
@@ -56,42 +61,10 @@ const PopMobileTitleText = keyframes`
   }
 `
 
-export const HeadingText = styled.p`
-  color: white;
-  text-align: left;
-  font-size: 6.5rem;
-  //margin-right: 10rem;
-
-  @media screen and (max-width: 960px){
-    font-size: 5.5rem;
-  }
+export const InfoHeadingText = styled(HeadingText)`
 `
 
-export const AnimatedTitle = styled(HeadingText)`
-  :hover{
-    color: #2ec02e;
-    transition: color .5s;
-  }
-/* 
-  @media screen and (min-width: 960px){
-    :hover{
-      font-size: 7.5rem;
-      transition: font-size .5s;
-      animation-name: ${PopTitleText};
-      animation-duration: 0.7s;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  @media screen and (max-width: 960px){
-    :hover{
-      transition: font-size .5s;
-      font-size: 5.5rem;
-      animation-name: ${PopMobileTitleText};
-      animation-duration: 0.7s;
-      animation-fill-mode: forwards;
-    }
-  } */
+export const InfoAnimatedTitle = styled(AnimatedTitle)`
 `
 
 const PopText = keyframes`
@@ -106,13 +79,8 @@ const PopText = keyframes`
   }
 `
 
-export const Text = styled.p`
-  color: ${props => props.color || "white"};
-  font-size: 1.5rem;
+export const InfoText = styled(Text)`
 
-  /* @media screen and (max-width: 960px){
-    margin-bottom: 20px;
-  } */
 `
 
 export const AnimatedText = styled(Text)`
@@ -128,31 +96,17 @@ export const AnimatedText = styled(Text)`
   }
 `
 
-export const AnimatedColorText = styled(Text)`
+export const InfoAnimatedColorText = styled(AnimatedColorText)`
   :hover{
     color: #2ec02e;
     transition: color .5s;
   }
 `
 
-export const WebLink = styled.a`
-  color: #55b4cc;
-  font-size: 1.5rem;
-
-  :hover{
-    color: #2c74b2;
-    transition: color .5s;
-  }
+export const InfoWebLink = styled(WebLink)`
 `
 
-export const PageLink = styled(Link)`
-  color: #55b4cc;
-  font-size: 1.5rem;
-
-  :hover{
-    color: #2c74b2;
-    transition: color .5s;
-  }
+export const InfoPageLink = styled(PageLink)`
 `
 
 export const EmptyImg = styled.div`
@@ -201,8 +155,7 @@ export const InfoSectionWrapper = styled.div`
   }
 `
 
-export const NewLine = styled.div`
-  margin-bottom: 10px;
+export const InfoNewLine = styled(NewLine)`
 `
 
 // Text pop animation

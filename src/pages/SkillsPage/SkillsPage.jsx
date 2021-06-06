@@ -24,7 +24,7 @@ import {
   NewLine,
   WebLink,
   AnimatedColorText
-} from '../../components/InfoSection/InfoSectionElems'
+} from '../../GlobalElems'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css/'

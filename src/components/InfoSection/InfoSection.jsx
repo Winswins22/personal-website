@@ -4,10 +4,10 @@ import {
   ItemWrapper,
   InfoSectionWrapper,
   HeadingText,
-  Text,
+  InfoText,
   HorizontalSpacing,
   EmptyImg,
-  AnimatedTitle,
+  InfoAnimatedTitle,
   TitleSpacing,
 } from './InfoSectionElems'
 
@@ -33,7 +33,7 @@ const InfoSection = ({title="", description="", img="", alt="Placeholder alt tex
           {
             (title !== "") ? 
               (typeof(title) === 'string') ?
-                <AnimatedTitle> {title} </AnimatedTitle>
+                <InfoAnimatedTitle> {title} </InfoAnimatedTitle>
               :
                 <>{title}</>
             :
@@ -43,7 +43,7 @@ const InfoSection = ({title="", description="", img="", alt="Placeholder alt tex
           {
             (description !== "") ? 
               (typeof(description) === 'string') ?
-                <Text> {description} </Text>
+                <InfoText> {description} </InfoText>
               :
                 <>{description}</>
             :

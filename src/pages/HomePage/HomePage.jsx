@@ -14,7 +14,7 @@ import {
   LogoAsText,
   Text,
   AnimatedText
-} from '../../components/InfoSection/InfoSectionElems'
+} from '../../GlobalElems'
 
 import Logo from '../../images/logo.png'
 
