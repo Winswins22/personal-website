@@ -73,3 +73,21 @@ export const LogoAsText = styled.img`
     width: 80px;
   }
 `
+
+export const GeneralPageSpacer = styled.div`
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+`
+
+export const ReducedPageSpacer = styled.div`
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  
+`

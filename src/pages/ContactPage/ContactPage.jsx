@@ -5,7 +5,24 @@ import Loader from '../../components/Loader/Loader'
 
 import {getFinishTimeFromMode} from '../../components/Loader/LoaderTimings'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css/'
+
 import ContactForm from '../../components/ContactForm/ContactForm'
+
+import OSM_Map from '../../components/OSM_Map/OSM_Map'
+
+import {
+  ReducedPageSpacer,
+  AnimatedTitle,
+  Text,
+  Spacing
+} from '../../GlobalElems'
+
+import {
+  DualGrid,
+  VerticalSpacing
+} from './Elems'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
@@ -19,6 +36,11 @@ import ContactForm from '../../components/ContactForm/ContactForm'
 // See src/components/Loader/LoaderTimings.jsx for more details.
 function ContactPage({mode = "fast", initialLoading = 0}){
   const [timesLoaded, setLoading] = useState(initialLoading);
+
+  //Animate on Scroll
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,7 +58,35 @@ function ContactPage({mode = "fast", initialLoading = 0}){
         (timesLoaded === 1) ? 
           
           <PageWrapper>
-            <ContactForm></ContactForm>
+            
+            <DualGrid>
+              
+              <ReducedPageSpacer data-aos="fade-right">
+
+                <div style={{display:"flex", flexDirection:"row"}}>
+                  <AnimatedTitle> Contact </AnimatedTitle>
+                  <Spacing></Spacing>
+                  <Spacing></Spacing>
+                  <Spacing></Spacing>
+                  <AnimatedTitle> Me </AnimatedTitle>
+                </div>
+
+                <VerticalSpacing></VerticalSpacing>
+
+                <Text> I'm interested in oppurtunities to apply my React skills and learn new web dev concepts. However, if you have any questions or requests, don't hesitate to use the form.</Text>
+
+                <VerticalSpacing></VerticalSpacing>
+
+                <ContactForm></ContactForm>
+
+              </ReducedPageSpacer>
+
+              <div data-aos="fade-left">
+                <OSM_Map></OSM_Map>
+              </div>
+
+            </DualGrid>
+            
           </PageWrapper>
 
         :

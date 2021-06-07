@@ -1,3 +1,11 @@
+// This component uses EmailJS.
+// Visit 'https://www.emailjs.com/docs/tutorial/overview/' if you are wondering what 
+// 'emailjs.sendForm('service_r7ffpo6', 'template_sbrnsmx', e.target, 'user_EJ2UEZuXpkUROE2gEEqxW')' 
+// represents in the code.
+
+// If you are reusing this code, you'll want to create an EmailJS account and re-create parts of this component.
+// Here's a quick YT tutorial for EmallJS: https://www.youtube.com/watch?v=NgWGllOjkbs
+
 import React, {useState, useEffect} from 'react'
 import emailjs from 'emailjs-com'
 

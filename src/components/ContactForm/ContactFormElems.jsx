@@ -8,6 +8,7 @@ export const FormInput = styled.input`
   font-size: 1.5rem;
 
   padding: 5px;
+  border: none; 
 `
 
 export const FormInputBox = styled.textarea`
@@ -18,16 +19,17 @@ export const FormInputBox = styled.textarea`
   font-size: 1.5rem;
 
   padding: 5px;
+  border: none; 
 `
 
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 50vw;
+  width: 100%;
 
   @media screen and (max-width: 960px){
-    width: 100vw;
+    width: 90vw;
   }
 `
 
@@ -42,6 +44,8 @@ export const FormButton = styled.input`
 
   color: white;
   font-size: 1.5rem;
+
+  border: none; 
 
   :hover{
     transition: background-color 0.5s ease;
