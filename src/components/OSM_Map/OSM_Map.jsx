@@ -9,7 +9,7 @@ const OSM_Map = () => {
 
   return (
     <>
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer center={position} zoom={4} scrollWheelZoom={true} style={{width: 'calc(50vw - 75px)', height: '100vh'}}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
