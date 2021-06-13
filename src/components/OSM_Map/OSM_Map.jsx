@@ -5,11 +5,11 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const OSM_Map = () => {
 
-  const position = [50, -85];
+  const position = [43.777702, -79.233238];
 
   return (
     <>
-      <MapContainer center={position} zoom={4} scrollWheelZoom={true} style={{width: 'calc(50vw - 75px)', height: '100vh'}}>
+      <MapContainer center={position} zoom={4} scrollWheelZoom={false} style={{width: 'calc(50vw - 75px)', height: '100vh'}}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
