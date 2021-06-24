@@ -14,6 +14,7 @@ export const ProgressBarBase = styled.div`
   border-radius: 1.5em;
   width: 50vw;
   height: 1em;
+  font-size: 1rem;
 `
 
 // the green progress bar. Moves according to a variable
@@ -22,6 +23,7 @@ export const ProgressBar = styled(animated.div)`
   border-radius: 1.5em;
   //width: ${({barProgress}) => ((barProgress !== 0) ? barProgress : 0)}vw;
   height: 1em;
+  font-size: 1rem;
 `
 
 // The bg, the animation target

@@ -18,6 +18,10 @@ import {
   PageLink
 } from '../../GlobalElems'
 
+import WordTyper from '../../components/WordTyper/WordTyper'
+
+import { SizeWrapper } from './Elems'
+
 // initialLoading:
 // Set to '1' to skip loader animation.
 
@@ -95,6 +99,14 @@ function AboutPage({initialLoading = 0, mode="standard"}){
 
             </div>
 
+          </>}
+
+          img={<>
+            <SizeWrapper>
+              <div style={{display:"flex", justifyContent:"center"}}>
+                <WordTyper></WordTyper>
+              </div>
+            </SizeWrapper>
           </>}
         ></InfoSection>
 
