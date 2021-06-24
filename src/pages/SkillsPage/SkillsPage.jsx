@@ -123,7 +123,7 @@ function SkillPage({mode = "fast", initialLoading = 0}){
 
                     <NewLine></NewLine>
 
-                    <Text> I have worked in a team to create a website for <WebLink href="https://codingclub.bethuneci.com/">our school's Coding Club</WebLink>, a website to host my <WebLink href="https://winswins22.github.io/English-Portfolio/">English project</WebLink>, and the current website you are viewing.  </Text>
+                    <Text> I have worked in a team to create a website for <WebLink href="https://codingclub.bethuneci.com/">our school's Coding Club</WebLink>, reused my reusable components to create a website to host my <WebLink href="https://winswins22.github.io/English-Portfolio/">English project</WebLink>, and the current website you are viewing.  </Text>
 
                     <NewLine></NewLine>
 

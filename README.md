@@ -3,7 +3,7 @@
  
  Can be accessed at: https://winswins22.github.io/personal-website/
 
-# NOTES FOR FORKING
+# Notes for forking
  Depending on what you want to do with this code, you may want to modify parts of the code so that it is more personalized. Additionally, some parts of the code are not easily transferable.  
 
  Here is a quick list of items you may want to change for quick reuse:

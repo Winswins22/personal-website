@@ -83,7 +83,7 @@ function AboutPage({initialLoading = 0, mode="standard"}){
 
               <NewLine></NewLine>
 
-              <Text> I have been an exec in <WebLink href="https://codingclub.bethuneci.com/">my school's Coding Club</WebLink> for a year, and I have both taught others how to create websites and picked up many useful pieces of knowledge to enhance my programming skills. </Text>
+              <Text> I have held an executive position in <WebLink href="https://codingclub.bethuneci.com/">my school's Coding Club</WebLink> for a year, and I have both taught others how to create websites and picked up many useful pieces of knowledge to enhance my programming skills. </Text>
 
               <NewLine></NewLine>
 
