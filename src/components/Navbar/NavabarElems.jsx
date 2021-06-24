@@ -100,7 +100,6 @@ export const TripleLineLogo = styled(Link)`
   @media screen and (max-width: 960px){
     display: fixed;
   }
-
 `
 
 // export const NavbarMenu = styled.div`

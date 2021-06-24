@@ -19,6 +19,7 @@ function App() {
 
   return (
     <>
+
       <Router>
         <Navbar></Navbar>
 
@@ -31,6 +32,7 @@ function App() {
         </Switch>
         
       </Router>
+
     </>
   );
 }

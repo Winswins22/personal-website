@@ -17,6 +17,7 @@ import {
 } from '../../GlobalElems'
 
 import Logo from '../../images/logo.png'
+import ParticleBg from '../../components/ParticleBg/ParticleBg'
 
 // initialLoading:
 // Set to '1' to skip loader animation.
@@ -46,10 +47,10 @@ function HomePage({mode = "standard", initialLoading = 0}){
 
   return(
     <>
-      
+
+      <ParticleBg></ParticleBg>
       {
         (timesLoaded === 1) ? 
-          
           <PageWrapper>
 
             <InfoSection 
@@ -112,7 +113,6 @@ function HomePage({mode = "standard", initialLoading = 0}){
         :
           <Loader mode={mode}></Loader>
       }
-      
     </>
   )
 }

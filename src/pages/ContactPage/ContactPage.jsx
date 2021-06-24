@@ -57,7 +57,7 @@ function ContactPage({mode = "fast", initialLoading = 0}){
       {
         (timesLoaded === 1) ? 
           
-          <PageWrapper>
+          <PageWrapper style={{display:"flex", justifyContent:"center"}}>
             
             <DualGrid>
               
@@ -81,7 +81,7 @@ function ContactPage({mode = "fast", initialLoading = 0}){
 
               </ReducedPageSpacer>
 
-              <div data-aos="fade-left">
+              <div data-aos="fade-left" style={{display:"flex", justifyContent:"center"}}>
                 <OSM_Map></OSM_Map>
               </div>
 
