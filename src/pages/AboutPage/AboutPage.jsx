@@ -95,7 +95,7 @@ function AboutPage({initialLoading = 0, mode="standard"}){
               
               <NewLine></NewLine>
 
-              <Text> <PageLink to={'/contact'}> Let's make something special. </PageLink>  </Text>
+              {/* <Text> <PageLink to={'/contact'}> Let's make something special. </PageLink>  </Text> */}
 
             </div>
 
