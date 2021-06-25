@@ -55,7 +55,7 @@ export const HeadingText = styled.p`
   //margin-right: 10rem;
 
   @media screen and (max-width: 960px){
-    font-size: 5.5rem;
+    font-size: 3.5rem;
   }
 `
 

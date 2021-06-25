@@ -26,8 +26,8 @@ export const NavbarItems = [
     text: "Contact",
     linkTo: '/contact',
   },
-  {
-    text: "Test",
-    linkTo: './test',
-  }
+  // {
+  //   text: "Test",
+  //   linkTo: './test',
+  // }
 ]
