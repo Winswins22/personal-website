@@ -11,7 +11,7 @@
 personal-website/src/images/
  - Replace the text in all of the pages in personal-website/src/pages
  - Change your map location in personal-website/src/components/OSM_Map/OSM_Map.jsx
- - If you are reusing the contact form, create an EmailJS account and reconfigure the code inside personal-website/src/components/ContactForm. You may find 'https://www.youtube.com/watch?v=NgWGllOjkbs' helpful.
+ - If you are reusing the contact form, create an EmailJS account and reconfigure the code inside personal-website/src/components/ContactForm. [Tutorial](https://www.youtube.com/watch?v=NgWGllOjkbs)
 
 # Running the website locally:
  0: Clone this repository and navigate to the directory.
