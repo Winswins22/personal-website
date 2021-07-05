@@ -1,8 +1,6 @@
 # personal-website
- My personal website with my skills, projects, and experience. Currently under construction.
+ My [personal website](https://winswins22.github.io/personal-website/) with my skills, projects, and experience. Currently under construction.
  
- Can be accessed at: https://winswins22.github.io/personal-website/
-
 # Notes for forking
  Depending on what you want to do with this code, you may want to modify parts of the code so that it is more personalized. Additionally, some parts of the code are not easily transferable.  
 
